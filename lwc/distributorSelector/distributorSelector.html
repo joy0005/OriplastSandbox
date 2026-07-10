@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="Account Limit Enhancement">
+
+        <div class="container">
+
+            <!-- LEFT SIDE -->
+            <div class="left-panel">
+                <lightning-input type="date" label="Start Date" onchange={handleStartDate}>
+                </lightning-input>
+
+                <lightning-input type="number" label="Duration (Days)" onchange={handleDuration}>
+                </lightning-input>
+
+                <lightning-input type="date" label="End Date" value={endDate} disabled></lightning-input>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="right-panel">
+
+                <lightning-input type="number" label="Limit" onchange={handleLimit}>
+                </lightning-input>
+
+                <!-- ACCOUNT DROPDOWN -->
+                <div class="dropdown-container">
+
+                    <div class="section-title">Available Accounts</div>
+
+                    <div class="dropdown-box" onclick={toggleDropdown}>
+                        <span class="selected-text">{selectedAccountName}</span>
+                        <span class="arrow">▼</span>
+                    </div>
+
+                    <!-- Dropdown List -->
+                    <template if:true={showDropdown}>
+                        <div class="dropdown-list">
+
+                            <!-- ADDED OPTIONS -->
+                            <div class="dropdown-item" data-id="none" data-name="Select Account" onclick={handleSelect}>
+                                Select Account
+                            </div>
+
+                            <div class="dropdown-item" data-id="all" data-name="All Selected" onclick={handleSelect}>
+                                All Selected
+                            </div>
+                            <!-- END ADDITION -->
+
+                            <template for:each={accounts} for:item="acc">
+                                <div key={acc.Id} data-id={acc.Id} data-name={acc.Name} class="dropdown-item"
+                                    onclick={handleSelect}>
+                                    {acc.Name}
+                                </div>
+                            </template>
+
+                        </div>
+                    </template>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BUTTON -->
+        <div class="btn-area">
+            <lightning-button variant="brand" label="OK" onclick={handleOk}>
+            </lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

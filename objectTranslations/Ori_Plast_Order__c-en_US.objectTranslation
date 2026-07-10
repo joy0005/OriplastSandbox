@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ori-Plast Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ori-Plast Orders</value>
+    </caseValues>
+    <fields>
+        <help><!-- The distributor account that generated the sales order. --></help>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Ori-Plast Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Limit --></label>
+        <name>Current_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days of created --></label>
+        <name>Days_of_created__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculated price of all submitted line items. --></help>
+        <label><!-- Total Order Value --></label>
+        <name>Final_Order_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order No --></label>
+        <name>Order_No__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order Status indicates various order stages. --></help>
+        <label><!-- Order Status --></label>
+        <name>Order_Status__c</name>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partially Delivered</masterLabel>
+            <translation><!-- Partially Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received by Business Central</masterLabel>
+            <translation><!-- Received by Business Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Calculated price for not delivered or cancelled line items. --></help>
+        <label><!-- Outstanding Order Value --></label>
+        <name>Outstanding_Order_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Order Pending Value --></label>
+        <name>Remaining_Total_Order_Item_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Close Reason --></label>
+        <name>Short_Close_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Closed --></label>
+        <name>Short_Closed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Central GST --></help>
+        <label><!-- Total Pending CGST --></label>
+        <name>Total_CGST__c</name>
+    </fields>
+    <fields>
+        <help><!-- Cancelled Order Value --></help>
+        <label><!-- Total Cancelled Order Value --></label>
+        <name>Total_Cancelled_Order_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Cash Discount --></label>
+        <name>Total_Cash_Discount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Delivered Order value --></help>
+        <label><!-- Total Delivered Order Value --></label>
+        <name>Total_Delivered_Order_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Discount --></label>
+        <name>Total_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Order Quantity --></label>
+        <name>Total_Order_Quantity__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculated Price after applying all the discounts. --></help>
+        <label><!-- Total Price After Discount --></label>
+        <name>Total_Price_After_Discount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total State GST --></help>
+        <label><!-- Total Pending SGST --></label>
+        <name>Total_SGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Trade Discount --></label>
+        <name>Total_Trade_Discount__c</name>
+    </fields>
+    <fields>
+        <help><!-- This flag indicates whether or not Navision has received the order. --></help>
+        <label><!-- is Sales Order Received? --></label>
+        <name>is_Sales_Order_Received__c</name>
+    </fields>
+    <layouts>
+        <layout>Ori-Plast Order Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Cancel Order --></label>
+        <name>Cancel_Order</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Deliver Order --></label>
+        <name>Deliver_Order</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Order --></label>
+        <name>Edit_Order</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Edit Order LWC --></label>
+        <name>Edit_Order_LWC</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Generate Sales Order --></label>
+        <name>Generate_Sales_Order</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Submit Order --></label>
+        <name>Submit_Order</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

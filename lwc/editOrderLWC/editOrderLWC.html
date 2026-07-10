@@ -1,0 +1,205 @@
+<template>
+    <lightning-card class="modern-card" title="Edit Order">
+        <div class="section-container action-selector">
+            <div class="slds-text-heading_small slds-m-bottom_small">Select Action</div>
+            <div class="radio-container">
+                <lightning-radio-group class="custom-radio-group" label="" options={options} value={selectedAction}
+                    onchange={handleChange} variant="button-group">
+                </lightning-radio-group>
+            </div>
+        </div>
+
+        <!-- STEP 1 : LIST -->
+        <template if:true={showTable}>
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="slds-text-heading_small">Order Items</div>
+                    <div class="selected-count slds-text-body_small" if:true={hasSelectedItems}>
+                        {selectedIds.length} item(s) selected
+                    </div>
+
+                </div>
+
+                <div class="table-container" style="overflow: auto;">
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer custom-table">
+                        <thead>
+                            <tr class="table-header-row">
+                                <th class="slds-text-title_caps" style="width: 50px;">
+                                    Select
+                                </th>
+                                <th class="slds-text-title_caps">Product</th>
+                                <th class="slds-text-title_caps" style="width: 100px;">Quantity</th>
+                                <th class="slds-text-title_caps" style="width: 120px;">Product Unit Price</th>
+                                <th class="slds-text-title_caps" style="width: 140px;">Total Price</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={orderLines} for:item="row">
+                                <tr key={row.id} class="table-row">
+                                    <td>
+                                        <div class="checkbox-container">
+                                            <lightning-input type="checkbox" data-id={row.id} onchange={handleSelect}
+                                                class="custom-checkbox">
+                                            </lightning-input>
+                                        </div>
+                                    </td>
+                                    <td class="product-cell">
+                                        <div class="product-info">
+                                            <div class="product-name">{row.productName}</div>
+                                        </div>
+                                    </td>
+                                    <td class="quantity-cell">
+                                        <span class="quantity-badge">{row.quantity}</span>
+                                    </td>
+                                    <td class="price-cell">
+                                        <div class="price-display">
+                                            <span class="currency-symbol">₹</span>
+                                            <span class="price-value">{row.unitPrice}</span>
+                                        </div>
+                                    </td>
+
+                                    <td class="price-cell">
+                                        <div class="price-display">
+                                            <span class="currency-symbol">₹</span>
+                                            <span class="price-value">{row.finalPrice}</span>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="button-footer">
+                    <lightning-button label="Next" variant="brand" onclick={handleNext} disabled={disableNextButton}>
+                    </lightning-button>
+
+                </div>
+            </div>
+        </template>
+
+        <!-- STEP 2 : EDIT SELECTED ITEMS -->
+        <template if:true={showEditTable}>
+            <div class="section-container">
+                <div class="section-header">
+                    <div class="slds-text-heading_small">Edit Selected Items</div>
+                    <div class="edit-hint slds-text-body_small">
+                        Update quantities as needed
+                    </div>
+                </div>
+
+                <div class="table-container" style="overflow: auto;">
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer edit-table">
+                        <thead>
+                            <tr class="table-header-row">
+                                <th class="slds-text-title_caps" style="width: 70px;">Line</th>
+                                <th class="slds-text-title_caps">Product</th>
+                                <th class="slds-text-title_caps" style="width: 120px;">Quantity</th>
+                                <th class="slds-text-title_caps" style="width: 120px;">Product Unit Price</th>
+                                <th class="slds-text-title_caps" style="width: 140px;">Total Price</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={editLines} for:item="row">
+                                <tr key={row.id} class="edit-row">
+                                    <td class="line-number-cell">
+                                        <span class="line-badge">{row.lineNumber}</span>
+                                    </td>
+                                    <td class="product-cell">
+                                        <div class="product-info">
+                                            <div class="product-name">{row.productName}</div>
+                                        </div>
+                                    </td>
+                                    <td class="quantity-edit-cell">
+                                        <lightning-input type="number" value={row.quantity} data-id={row.id}
+                                            onchange={handleQtyChange} class="quantity-input" min="1"
+                                            variant="label-hidden">
+                                        </lightning-input>
+                                    </td>
+                                    <td class="price-cell">
+                                        <div class="price-display">
+                                            <span class="currency-symbol">₹</span>
+                                            <span class="price-value">{row.unitPrice}</span>
+                                        </div>
+                                    </td>
+
+                                    <td class="price-cell">
+                                        <div class="price-display">
+                                            <span class="currency-symbol">₹</span>
+                                            <span class="price-value">{row.finalPrice}</span>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                    <div class="slds-text-align_right slds-m-top_small slds-text-heading_small">
+                        Total Order Value :
+                        <span style="font-weight:bold">
+                            ₹ {allEditTotal}
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="button-footer">
+                    <lightning-button label="Save Changes" variant="brand" onclick={saveEdits}>
+                    </lightning-button>
+                </div>
+            </div>
+        </template>
+
+        <!-- DELETE CONFIRM MODAL -->
+        <template if:true={showConfirm}>
+            <section class="slds-modal slds-fade-in-open modern-modal">
+                <div class="slds-modal__container modal-container">
+                    <header class="slds-modal__header modal-header">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-utility-error">
+                                    <svg class="slds-icon slds-icon_small slds-icon-text-error" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#error"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <h2 class="slds-modal__title slds-text-heading_medium">Confirm Deletion</h2>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="modal-content slds-p-around_medium" style="background-color: #ffffff;">
+                        <div class="slds-text-align_center">
+                            <p class="confirmation-text">
+                                Are you sure you want to delete the selected {selectedIds.length} item(s)?
+                            </p>
+                            <p class="confirmation-hint slds-text-color_weak slds-m-top_x-small">
+                                This action cannot be undone.
+                            </p>
+                        </div>
+                    </div>
+                    <footer class="slds-modal__footer modal-footer">
+                        <lightning-button label="Cancel" onclick={closeConfirm} class="cancel-button">
+                        </lightning-button>
+                        <lightning-button variant="destructive" label="Delete" onclick={confirmDelete}>
+                        </lightning-button>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+
+        <!-- CREATE ORDER MODAL Start -->
+        <!-- <template if:true={showCreateOrder}> -->
+            <template if:true={isOrderReady}>
+                <c-add-new-order-with-existing-l-w-c account-id={accountId} order-lines-for-add={orderLinesForAdd}
+                    order={order}>
+                </c-add-new-order-with-existing-l-w-c>
+            </template>
+
+        <!-- </template> -->
+    </lightning-card>
+</template>

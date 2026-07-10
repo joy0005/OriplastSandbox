@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Order_Line_Item_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Order_Line_Item_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Box_Order_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Box Order Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CGST_After_Shipment__c</fullName>
+        <label>CGST After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CGST_Percentage__c</fullName>
+        <description>This Field Used to show cgst in pdf</description>
+        <formula>(Ori_Plast_Product__r.GST_Value__c /(2*100))</formula>
+        <label>CGST Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CGST__c</fullName>
+        <description>This Field store CGST Price (Price After Discount * CGST%)</description>
+        <label>CGST</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cash_Discount_CD_After_Shipment__c</fullName>
+        <label>Cash Discount(CD) After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cash_Discount_CD__c</fullName>
+        <description>This Field store Cash Discount ((Quantity*Unit Price)*Cash Discount %</description>
+        <label>Cash Discount(CD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cash_Discount_Percentage__c</fullName>
+        <label>Cash Discount Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Ori_Plast_Product__r.Category_Picklist__c,
+&apos;P1&apos;,&apos;PVC Pipe ASTM-D-1785, PVC ASTM (Schdule)&apos;,
+&apos;P2&apos;,&apos;PVC Grey pipes as per IS : 4985,UPVC IS 4985&apos;,
+&apos;P3&apos;,&apos;CASING &amp; PVC Casing Pipes as per IS : 12818&apos;,
+&apos;P4&apos;,&apos;PVC SCREEN &amp; PVC Screen Pipes as per IS : 12818&apos;,
+&apos;P5&apos;,&apos;PVC GARDEN HOSE PIPE&apos;,
+&apos;P6&apos;,&apos;PVC SWR pipes &amp; fittings as per IS:13592&apos;,
+&apos;P7&apos;,&apos;PVC Column Pipe&apos;,
+&apos;P8&apos;,&apos;PVC Submersible&apos;,
+&apos;P9&apos;,&apos;CPVC Pipe&apos;,
+&apos;PF&apos;,&apos;PVC Fittings&apos;,
+&apos;H1&apos;,&apos;HDPE Pipe IS 4984 (Black)&apos;,
+&apos;H2&apos;,&apos;HDPE Pipe IS 14333 (Black)&apos;,
+&apos;H3&apos;,&apos;GI STANDERD &amp; PLB Duct Pipe&apos;,
+&apos;H4&apos;,&apos;HDPE IS 4427 (Blue/Black)&apos;,
+&apos;H5&apos;,&apos;HDPE 4984-2016&apos;,
+&apos;HF&apos;,&apos;HDPE Fittings&apos;,
+&apos;DF&apos;,&apos;Direct Action Hand Pump Fittings&apos;,
+&apos;M1&apos;,&apos;MDPE Pipe &amp; MDPE IS 14885&apos;,
+&apos;M2&apos;,&apos;MDPE pipe &amp; MDPE IS 4427&apos;,
+&apos;SL&apos;,&apos;Solvent Cement&apos;,
+&apos;NI&apos;,&apos;PVC SWR pipes &amp; fittings (non-standard)&apos;,
+&apos;DP&apos;,&apos;Direct Action Hand Pump Set&apos;,
+&apos;H6&apos;,&apos;PPR&apos;,
+&apos;H7&apos;,&apos;HDPE Copper Wire&apos;,
+&apos;M3&apos;,&apos;PE PIPE(MDPE)&apos;,
+&apos;MF&apos;,&apos;MDPE Fittings&apos;,
+&apos;OF&apos;,&apos;OPVC Fittings&apos;,
+&apos;OP&apos;,&apos;OPVC Pipe&apos;,
+&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CONTAINS(Unit_of_Measure__c, &apos;MTR&apos;) ,(Quantity__c * VALUE(Ori_Plast_Product__r.Length_In_Meter__c)), Quantity__c)</formula>
+        <label>ERP Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Final_Price_After_Shipment__c</fullName>
+        <label>Final Price After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Final_Price__c</fullName>
+        <description>This Field store Final Price ((Quantity*Unit Price)-Total Discount )+CGST+SGST</description>
+        <label>Final Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IGST_After_Shipment__c</fullName>
+        <label>IGST After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IGST__c</fullName>
+        <description>This Field store IGST price (Price After Discount * IGST%)</description>
+        <label>IGST</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OriPlast_Product_Price__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <label>OriPlast Product Price</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Product_Price__c.Oriplast_Product__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Ori_Plast_Product__c</valueField>
+            </filterItems>
+            <infoMessage>Please select a price belongs to the selected product.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Product_Price__c</referenceTo>
+        <relationshipLabel>Order-Line-Items</relationshipLabel>
+        <relationshipName>Order_Line_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OriPlast_Product_Unit_Price__c</fullName>
+        <description>This field fetch Unit Price from related product</description>
+        <formula>OriPlast_Product_Price__r.Unit_Price__c</formula>
+        <label>OriPlast Product Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Ori_Plast_Order__c</fullName>
+        <description>Lookup with Ori-plast Order</description>
+        <label>Ori-Plast Order</label>
+        <referenceTo>Ori_Plast_Order__c</referenceTo>
+        <relationshipLabel>Order-Line-Items</relationshipLabel>
+        <relationshipName>Order_Line_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Ori_Plast_Product_Description__c</fullName>
+        <description>This Field is not needed</description>
+        <externalId>false</externalId>
+        <formula>Ori_Plast_Product__r.Description__c</formula>
+        <label>Ori-Plast Product Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ori_Plast_Product_Name__c</fullName>
+        <description>This Field is used to show Ori-Plast Product name in place order LWC</description>
+        <externalId>false</externalId>
+        <formula>Ori_Plast_Product__r.Name</formula>
+        <label>Ori-Plast Product Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ori_Plast_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup with Ori-plast Product</description>
+        <label>Ori-Plast Product</label>
+        <referenceTo>OriPlast_Product__c</referenceTo>
+        <relationshipLabel>Order-Line-Items</relationshipLabel>
+        <relationshipName>Order_Line_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_After_Discount_After_Shipment__c</fullName>
+        <label>Price After Discount After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Price_After_Discount__c</fullName>
+        <description>This Field store After Discount Price ((Quantity*Unit Price)-Trade Discount - Cash Discount)</description>
+        <label>Price After Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>This is for Product quantity</description>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remaining_Price_For_Shipment__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+        OR(
+            ISPICKVAL(Status__c, &quot;Partially Delivered&quot;),
+            ISPICKVAL(Status__c, &quot;Received by Business Central&quot;),
+            ISBLANK(TEXT(Status__c))
+        ),
+        Final_Price__c - Final_Price_After_Shipment__c,
+        0
+    )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Shipment Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remaining_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <formula>ERP_Quantity__c -  Shipped_Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SGST_After_Shipment__c</fullName>
+        <label>SGST After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SGST_Percentage__c</fullName>
+        <description>This field used to show sgst value in pdf</description>
+        <formula>(Ori_Plast_Product__r.GST_Value__c /(2*100))</formula>
+        <label>SGST Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SGST__c</fullName>
+        <description>This Field store SGST price (Price After Discount * SGST%)</description>
+        <label>SGST</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SKU__c</fullName>
+        <description>This field Store Product Sku</description>
+        <externalId>false</externalId>
+        <label>SKU</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipped_Quanity_Measure__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CONTAINS(Unit_of_Measure__c, &apos;MTR&apos;) ,( Shipped_Quantity__c * VALUE(Ori_Plast_Product__r.Length_In_Meter__c)),  Shipped_Quantity__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Shipped Quanity Measure</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipped_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Shipped Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Discount__c</fullName>
+        <label>Special Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Received by Navision</fullName>
+                    <default>false</default>
+                    <label>Received by Business Central</label>
+                </value>
+                <value>
+                    <fullName>Partially Delivered</fullName>
+                    <default>false</default>
+                    <label>Partially Delivered</label>
+                </value>
+                <value>
+                    <fullName>Delivered</fullName>
+                    <default>false</default>
+                    <label>Delivered</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <label>Cancelled</label>
+                </value>
+                <value>
+                    <fullName>Short Closed</fullName>
+                    <default>false</default>
+                    <label>Short Closed</label>
+                </value>
+                <value>
+                    <fullName>Migrated / Consolidated</fullName>
+                    <default>false</default>
+                    <label>Migrated / Consolidated</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Discount_After_Shipment__c</fullName>
+        <formula>Cash_Discount_CD_After_Shipment__c  +  Trade_Discount_TD_After_Shipment__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Discount After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Discount__c</fullName>
+        <description>This Field store Total Discount (Trade Discount + Cash Discount)</description>
+        <formula>Cash_Discount_CD__c  +  Trade_Discount_TD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Price_After_Shipment__c</fullName>
+        <formula>OriPlast_Product_Price__r.Unit_Price__c  *    Shipped_Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Price__c</fullName>
+        <description>This Field store Total Price (Quantity*Unit Price)</description>
+        <formula>OriPlast_Product_Price__r.Unit_Price__c *  ERP_Quantity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trade_Discount_TD_After_Shipment__c</fullName>
+        <label>Trade Discount(TD) After Shipment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trade_Discount_TD__c</fullName>
+        <description>This Field store Trade Discount ((Quantity*Unit Price)*Trade Discount %)</description>
+        <label>Trade Discount(TD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Trade_Discount__c</fullName>
+        <description>This Field store Trade Discount for A Product from Discount Mapping Obj. by flow</description>
+        <label>Trade Discount</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Unit_of_Measure__c</fullName>
+        <externalId>false</externalId>
+        <label>Unit of Measure</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unit_of_Measurement__c</fullName>
+        <description>This Field Used to Show UOM of the Product</description>
+        <externalId>false</externalId>
+        <formula>IF(TEXT( Ori_Plast_Product__r.Category_Picklist__c ) = &quot;P5&quot; || TEXT(Ori_Plast_Product__r.Category_Picklist__c )=&quot;PF&quot;
+, &quot;PCS (Piece)&quot;, &quot;MTR (Meter)&quot;)</formula>
+        <label>Unit of Measurement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Order-Line-Item</label>
+    <nameField>
+        <displayFormat>OLN-{000000}</displayFormat>
+        <label>Order-Line-Item No</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Order-Line-Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

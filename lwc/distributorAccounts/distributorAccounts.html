@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Distributor Accounts" icon-name="standard:account">
+
+        <template if:true={accounts}>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th>Account Name</th>
+                        <th>Distributor User</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={accounts} for:item="acc">
+                        <tr key={acc.accountId}>
+                            <td>{acc.accountName}</td>
+                            <td>{acc.userName}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error slds-p-around_medium">
+                Error loading accounts
+            </p>
+        </template>
+
+    </lightning-card>
+</template>

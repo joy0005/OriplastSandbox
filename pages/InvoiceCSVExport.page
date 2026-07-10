@@ -1,0 +1,15 @@
+<!-- 
+@Date - 12/11/2025
+@Description - A Visualforce page to export invoice line items in CSV format for a given distributor.
+@Last Modified By - Ayantika Chakraborty
+@Last Modified Date - 12/11/2025
+-->
+<apex:page contentType="text/csv; charset=UTF-8#InvoiceReport.csv" cache="true" controller="InvoiceCSVExportController">
+    Invoice Number,Invoice Name,Invoice Line Item No,Invoice Date,Created Date,Distributor,,Dealer Name,Ori-Plast Product,Item Description,Ori-Plast Product Category,Quantity,Unit of Measure,Final Price
+    <apex:outputText value="" />
+
+    <apex:repeat value="{!invoiceLineItems}" var="item">
+        {!item.line.Ori_Plast_Invoice__r.Invoice_Number__c},{!item.line.Ori_Plast_Invoice__r.Name},{!item.line.Name},{!item.line.Ori_Plast_Invoice__r.Invoice_Date__c},{!item.line.Ori_Plast_Invoice__r.CreatedDate},{!item.line.Ori_Plast_Invoice__r.Distributor__r.Name},{!item.line.Ori_Plast_Invoice__r.Dealer_Name__c},{!item.line.Ori_Plast_Product_Name__c},{!item.line.SKU__c},{!item.categoryLabel},{!item.line.Quantity__c},{!item.line.Unit_of_Measure__c},{!item.line.Final_Price__c}
+        <apex:outputText value="" />
+    </apex:repeat>
+</apex:page>

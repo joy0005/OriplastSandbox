@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Transaction Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Transaction Logs</value>
+    </caseValues>
+    <fields>
+        <help><!-- Stores details regarding the method, action or processNode that this log was created from --></help>
+        <label><!-- Method or Action --></label>
+        <name>Action__c</name>
+    </fields>
+    <fields>
+        <help><!-- A visual representation of the Days, Hours, Mins since the entry was created --></help>
+        <label><!-- Age --></label>
+        <name>AgeDisplay__c</name>
+    </fields>
+    <fields>
+        <help><!-- Age of the log entry in days --></help>
+        <label><!-- Age --></label>
+        <name>Age__c</name>
+    </fields>
+    <fields>
+        <help><!-- Any additional context information that may assist with troubleshooting the generated issue. --></help>
+        <label><!-- Context --></label>
+        <name>Context__c</name>
+    </fields>
+    <fields>
+        <help><!-- A description of the issue that has occurred. --></help>
+        <label><!-- Message --></label>
+        <name>Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the API name of either the Apex class, or Process that this log entry was created within. --></help>
+        <label><!-- Class or Process --></label>
+        <name>Process__c</name>
+    </fields>
+    <fields>
+        <help><!-- This provides a UI redirect to any related record. This may be a system record, or could store a process id (such as a batch Job ID). --></help>
+        <label><!-- Reference --></label>
+        <name>ReferenceDisplay__c</name>
+    </fields>
+    <fields>
+        <help><!-- This provides a UI redirect to any related record. This may be a system record or could store a process id (such as a batch Job ID). --></help>
+        <label><!-- Reference ID --></label>
+        <name>Reference__c</name>
+    </fields>
+    <fields>
+        <help><!-- A clear definition of how important a raised log is within the system. --></help>
+        <label><!-- Severity --></label>
+        <name>Severity__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Info</masterLabel>
+            <translation><!-- Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warning</masterLabel>
+            <translation><!-- Warning --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Where applicable, this will show the process/action call hierarchy that resulted in the current issue. --></help>
+        <label><!-- Stack Trace --></label>
+        <name>Stack_Trace__c</name>
+    </fields>
+    <fields>
+        <help><!-- A description of the issue that has occurred. --></help>
+        <label><!-- Summary --></label>
+        <name>Summary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stores the user details of the operator who triggered this log entry --></help>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Transaction Logs --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Transaction Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

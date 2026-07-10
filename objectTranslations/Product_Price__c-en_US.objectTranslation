@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Price</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Prices</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ending Date --></label>
+        <name>Ending_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Items Description --></label>
+        <name>Items_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oriplast Product Name --></label>
+        <name>Oriplast_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oriplast Product --></label>
+        <name>Oriplast_Product__c</name>
+        <relationshipLabel><!-- Product Prices --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Unique Key --></label>
+        <name>Product_Unique_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Type --></label>
+        <name>Sales_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Date --></label>
+        <name>Starting_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measure Code --></label>
+        <name>Unit_of_Measure_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Product iteam price Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

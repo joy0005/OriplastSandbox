@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Invoice Line Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Invoice Line Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- CGST Percentage --></label>
+        <name>CGST_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- CGST --></label>
+        <name>CGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Discount(CD) --></label>
+        <name>Cash_Discount_CD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Discount Percentage --></label>
+        <name>Cash_Discount_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Price --></label>
+        <name>Final_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- IGST Percentage --></label>
+        <name>IGST_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- IGST --></label>
+        <name>IGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice No. --></label>
+        <name>Invoice_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- OriPlast Product Unit Price --></label>
+        <name>OriPlast_Product_Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Invoice --></label>
+        <name>Ori_Plast_Invoice__c</name>
+        <relationshipLabel><!-- Invoice Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Product Name --></label>
+        <name>Ori_Plast_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Product --></label>
+        <name>Ori_Plast_Product__c</name>
+        <relationshipLabel><!-- Invoice Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price After Discount --></label>
+        <name>Price_After_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Price --></label>
+        <name>Product_Price__c</name>
+        <relationshipLabel><!-- Invoice Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGST Percentage --></label>
+        <name>SGST_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGST --></label>
+        <name>SGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Description --></label>
+        <name>SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Discount % --></label>
+        <name>Total_Discount_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Price --></label>
+        <name>Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trade Discount(TD) --></label>
+        <name>Trade_Discount_TD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trade Discount % --></label>
+        <name>Trade_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- UOM --></label>
+        <name>Unit_of_Measure__c</name>
+    </fields>
+    <layouts>
+        <layout>Ori-plast Invoice Line Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product Details --></label>
+            <section>Product Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

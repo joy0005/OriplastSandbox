@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <!-- Allow use as Record Page component -->
+        <target>lightning__RecordPage</target>
+
+        <!-- Allow use as Quick Action -->
+        <target>lightning__RecordAction</target>
+    </targets>
+
+    <targetConfigs>
+        <!-- This makes it appear on Ori_Plast_Order__c -->
+        <targetConfig targets="lightning__RecordAction">
+            <objects>
+                <object>Ori_Plast_Order__c</object>
+            </objects>
+            <actionType>ScreenAction</actionType>
+        </targetConfig>
+
+        <targetConfig targets="lightning__RecordPage">
+            <objects>
+                <object>Ori_Plast_Order__c</object>
+            </objects>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

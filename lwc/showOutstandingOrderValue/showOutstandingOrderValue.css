@@ -1,0 +1,79 @@
+.custom-card {
+    --slds-c-card-color-background: linear-gradient(135deg, #f8f9fe 0%, #ffffff 100%);
+    --slds-c-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+    --slds-c-card-radius-border: 12px;
+    border: 1px solid #f0f2f7;
+}
+
+.container {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-wrapper {
+    padding: 2rem 0;
+}
+
+.custom-spinner {
+    --slds-c-spinner-color-foreground: #0176d3;
+    --slds-c-spinner-color-foreground-dark: #014486;
+}
+
+.success-wrapper {
+    padding: 1rem 0;
+}
+
+.icon-background {
+    display: inline-flex;
+    padding: 12px;
+    background: linear-gradient(135deg, #0176d3 0%, #0b5cab 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(1, 118, 211, 0.2);
+}
+
+.icon-background lightning-icon {
+    --slds-c-icon-color-foreground: white;
+}
+
+.value-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.currency-symbol {
+    color: #0176d3;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.total-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0176d3 0%, #032d60 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.error-wrapper {
+    padding: 2rem 0;
+}
+
+.error-wrapper lightning-icon {
+    --slds-c-icon-color-foreground: #ea001e;
+}
+
+/* Hover effect */
+.custom-card:hover {
+    --slds-c-card-shadow: 0 8px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}

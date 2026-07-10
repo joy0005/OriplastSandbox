@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Button Calls a flow to change Order Status to Cancelled</description>
+    <flowDefinition>Order_Status_Change_to_Canceled</flowDefinition>
+    <label>Cancel Order</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>
