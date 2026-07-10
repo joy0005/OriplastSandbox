@@ -1,0 +1,73 @@
+<template>
+    <lightning-card
+    title="Total Outstanding Order Value"
+    class="custom-card"
+>
+    <div class="container slds-p-around_medium slds-text-align_center">
+
+        <!-- Loading State -->
+        <template if:true={isLoading}>
+            <div class="loading-wrapper">
+                <lightning-spinner 
+                    alternative-text="Loading"
+                    size="medium"
+                    variant="brand"
+                    class="custom-spinner"
+                ></lightning-spinner>
+                <p class="slds-text-body_small slds-m-top_small">Calculating total...</p>
+            </div>
+        </template>
+
+        <!-- Success State -->
+        <template if:true={formattedTotal}>
+            <div class="success-wrapper">
+                <div class="icon-background slds-m-bottom_medium">
+                    <lightning-icon
+                        icon-name="custom:custom79"
+                        alternative-text="Order Value"
+                        size="medium"
+                        class="slds-icon-custom-custom79"
+                    ></lightning-icon>
+                </div>
+                <div class="value-container">
+                    <span class="currency-symbol slds-text-heading_medium">₹</span>
+                    <p class="total-value">
+                        {formattedTotal}
+                    </p>
+                    
+                </div>
+                <div>
+
+                    <p class="total-value">
+                    {totalInWords}
+                </p>
+                </div>
+                <p class="slds-text-title slds-text-color_weak slds-m-top_small">
+                    Total Outstanding Amount
+                </p>
+            </div>
+        </template>
+
+        <!-- Error State -->
+        <template if:true={error}>
+            <div class="error-wrapper">
+                <div class="slds-m-bottom_small">
+                    <lightning-icon
+                        icon-name="utility:error"
+                        alternative-text="Error"
+                        size="medium"
+                        class="slds-icon-text-error"
+                    ></lightning-icon>
+                </div>
+                <p class="slds-text-color_error slds-text-body_regular">
+                    Unable to fetch data
+                </p>
+                <p class="slds-text-color_weak slds-text-body_small slds-m-top_xx-small">
+                    Please try again later
+                </p>
+            </div>
+        </template>
+
+    </div>
+</lightning-card>
+</template>

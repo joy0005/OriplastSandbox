@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>AssignValues</name>
+        <label>AssignValues</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.Trade_Discount_TD_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>TradeDiscountAfterShipment</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.Cash_Discount_CD_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CashDiscountAfter</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.Price_After_Discount_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PriceAfterDiscount</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.CGST_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CGSTAfterShipment</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.Total_Price_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Total_Discount_After_Shipment</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.SGST_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SGST_After_Shipment</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.Final_Price_After_Shipment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Final_Price_After_Shipment</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>singleOrderLineItem.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>UpdateOrderLineItem</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>CashDiscountAfter</name>
+        <dataType>Currency</dataType>
+        <expression>(({!$Record.Shipped_Quantity__c} * {!$Record.OriPlast_Product_Unit_Price__c} - {!TradeDiscountAfterShipment}) *
+(IF(
+    NOT(ISBLANK({!$Record.Cash_Discount_Percentage__c})), 
+    ({!$Record.Cash_Discount_Percentage__c} ), 0)/100
+    
+))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>CGSTAfterShipment</name>
+        <dataType>Currency</dataType>
+        <expression>{!PriceAfterDiscount} * (if(NOT(ISBLANK({!$Record.CGST_Percentage__c})),({!$Record.CGST_Percentage__c}),0)/100)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>Final_Price_After_Shipment</name>
+        <dataType>Currency</dataType>
+        <expression>{!PriceAfterDiscount} + {!CGSTAfterShipment} + {!SGST_After_Shipment}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>PriceAfterDiscount</name>
+        <dataType>Currency</dataType>
+        <expression>({!$Record.Shipped_Quantity__c} * {!$Record.OriPlast_Product_Unit_Price__c}) - ({!TradeDiscountAfterShipment} + {!CashDiscountAfter})</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>SGST_After_Shipment</name>
+        <dataType>Currency</dataType>
+        <expression>{!PriceAfterDiscount} * (if(NOT(ISBLANK({!$Record.SGST_Percentage__c})),({!$Record.SGST_Percentage__c}),0)/100)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>Total_Discount_After_Shipment</name>
+        <dataType>Currency</dataType>
+        <expression>{!CashDiscountAfter} + {!TradeDiscountAfterShipment}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>TradeDiscountAfterShipment</name>
+        <dataType>Currency</dataType>
+        <expression>{!$Record.Shipped_Quantity__c} * {!$Record.OriPlast_Product_Unit_Price__c} * 
+(IF(
+    NOT(ISBLANK({!$Record.Trade_Discount__c})), 
+    {!$Record.Trade_Discount__c} , 
+    0)/100
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Calculate Final Cost After Shipment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Calculate Final Cost After Shipment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Order_Line_Item</name>
+        <label>Get Order Line Item</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>AssignValues</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Order_Line_Item__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>UpdateOrderLineItem</name>
+        <label>UpdateOrderLineItem</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <inputReference>singleOrderLineItem</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Order_Line_Item</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Shipped_Quantity__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Order_Line_Item__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>singleOrderLineItem</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Order_Line_Item__c</objectType>
+    </variables>
+</Flow>

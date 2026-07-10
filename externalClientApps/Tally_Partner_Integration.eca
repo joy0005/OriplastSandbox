@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>indiateam+oriplast@halsaglobal.io</contactEmail>
+    <distributionState>Packaged</distributionState>
+    <isProtected>false</isProtected>
+    <label>Tally Partner Integration</label>
+    <orgScopedExternalApp>00DF6000000AIvX:Tally_Partner_Integration</orgScopedExternalApp>
+</ExternalClientApplication>

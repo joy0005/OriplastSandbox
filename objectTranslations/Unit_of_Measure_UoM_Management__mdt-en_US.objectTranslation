@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit of Measure (UoM) Management</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unit of Measure (UoM) Management</value>
+    </caseValues>
+    <fields>
+        <label><!-- Category Description --></label>
+        <name>Category_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measure Description --></label>
+        <name>Unit_of_Measure_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measure --></label>
+        <name>Unit_of_Measure__c</name>
+    </fields>
+    <layouts>
+        <layout>Unit of Measure (UoM) Management Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

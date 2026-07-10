@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Order-Line-Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Order-Line-Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Box Order Quantity --></label>
+        <name>Box_Order_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- CGST After Shipment --></label>
+        <name>CGST_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- CGST Percentage --></label>
+        <name>CGST_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- CGST --></label>
+        <name>CGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Discount(CD) After Shipment --></label>
+        <name>Cash_Discount_CD_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Discount(CD) --></label>
+        <name>Cash_Discount_CD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cash Discount Percentage --></label>
+        <name>Cash_Discount_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- ERP Quantity --></label>
+        <name>ERP_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Price After Shipment --></label>
+        <name>Final_Price_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Price --></label>
+        <name>Final_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- IGST After Shipment --></label>
+        <name>IGST_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- IGST --></label>
+        <name>IGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- OriPlast Product Price --></label>
+        <name>OriPlast_Product_Price__c</name>
+        <relationshipLabel><!-- Order-Line-Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- OriPlast Product Unit Price --></label>
+        <name>OriPlast_Product_Unit_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Order --></label>
+        <name>Ori_Plast_Order__c</name>
+        <relationshipLabel><!-- Order-Line-Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Product Description --></label>
+        <name>Ori_Plast_Product_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Product Name --></label>
+        <name>Ori_Plast_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Product --></label>
+        <name>Ori_Plast_Product__c</name>
+        <relationshipLabel><!-- Order-Line-Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Price After Discount After Shipment --></label>
+        <name>Price_After_Discount_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price After Discount --></label>
+        <name>Price_After_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Shipment Value --></label>
+        <name>Remaining_Price_For_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Remaining Quantity --></label>
+        <name>Remaining_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGST After Shipment --></label>
+        <name>SGST_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGST Percentage --></label>
+        <name>SGST_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- SGST --></label>
+        <name>SGST__c</name>
+    </fields>
+    <fields>
+        <label><!-- SKU --></label>
+        <name>SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipped Quanity Measure --></label>
+        <name>Shipped_Quanity_Measure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipped Quantity --></label>
+        <name>Shipped_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Special Discount --></label>
+        <name>Special_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migrated / Consolidated</masterLabel>
+            <translation><!-- Migrated / Consolidated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partially Delivered</masterLabel>
+            <translation><!-- Partially Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received by Business Central</masterLabel>
+            <translation><!-- Received by Business Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Closed</masterLabel>
+            <translation><!-- Short Closed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Discount After Shipment --></label>
+        <name>Total_Discount_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Discount --></label>
+        <name>Total_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Price After Shipment --></label>
+        <name>Total_Price_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Price --></label>
+        <name>Total_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trade Discount(TD) After Shipment --></label>
+        <name>Trade_Discount_TD_After_Shipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trade Discount(TD) --></label>
+        <name>Trade_Discount_TD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trade Discount --></label>
+        <name>Trade_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measure --></label>
+        <name>Unit_of_Measure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit of Measurement --></label>
+        <name>Unit_of_Measurement__c</name>
+    </fields>
+    <layouts>
+        <layout>Order-Line-Item Layout</layout>
+        <sections>
+            <label><!-- Costing Deatils Before Shipment --></label>
+            <section>Costing Deatils Before Shipment</section>
+        </sections>
+        <sections>
+            <label><!-- Costing Details After Shipment --></label>
+            <section>Costing Details After Shipment</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

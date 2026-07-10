@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Visit Compliance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Visit Compliances</value>
+    </caseValues>
+    <fields>
+        <label><!-- Allow Non-compliant Visits --></label>
+        <name>CheckIn_CMV__Allow_Non_compliant_Visits__c</name>
+    </fields>
+    <fields>
+        <help><!-- In Kilometers --></help>
+        <label><!-- Max Distance --></label>
+        <name>CheckIn_CMV__Max_Distance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Navigate to Visit on Check In --></label>
+        <name>CheckIn_CMV__Navigate_to_Visit_on_Check_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Navigate to Visit on Check Out --></label>
+        <name>CheckIn_CMV__Navigate_to_Visit_on_Check_Out__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

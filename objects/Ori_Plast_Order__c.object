@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Ori_Plast_Order_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Ori_Plast_Order_Record_Page1</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>OriPlast_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>OriPlast_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>Account__c</fields>
+        <fields>Total_CGST__c</fields>
+        <fields>Total_SGST__c</fields>
+        <fields>Final_Order_Value__c</fields>
+        <fields>Outstanding_Order_Value__c</fields>
+        <label>OriPlast Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Ori-plast product Supplier</description>
+        <inlineHelpText>The distributor account that generated the sales order.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Ori-Plast Orders</relationshipLabel>
+        <relationshipName>Ori_Plast_Orders</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Current_Limit__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_of_created__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY() -   DATEVALUE(CreatedDate)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days of created</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Final_Order_Value__c</fullName>
+        <description>This field store Final Price(Price after discount+cgst+sgst)</description>
+        <inlineHelpText>Calculated price of all submitted line items.</inlineHelpText>
+        <label>Total Order Value</label>
+        <summarizedField>Order_Line_Item__c.Final_Price__c</summarizedField>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Order_No__c</fullName>
+        <displayFormat>ON-26-27-{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Order No</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Order_Status__c</fullName>
+        <description>This field state different stage of orders</description>
+        <inlineHelpText>Order Status indicates various order stages.</inlineHelpText>
+        <label>Order Status</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <color>#FF9900</color>
+                    <default>true</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <color>#33FFFF</color>
+                    <default>false</default>
+                    <label>Submitted</label>
+                </value>
+                <value>
+                    <fullName>Received by Navision</fullName>
+                    <color>#66FF99</color>
+                    <default>false</default>
+                    <label>Received by Business Central</label>
+                </value>
+                <value>
+                    <fullName>Partially Delivered</fullName>
+                    <color>#66CCCC</color>
+                    <default>false</default>
+                    <label>Partially Delivered</label>
+                </value>
+                <value>
+                    <fullName>Delivered</fullName>
+                    <color>#33CC00</color>
+                    <default>false</default>
+                    <label>Delivered</label>
+                </value>
+                <value>
+                    <fullName>Cancelled</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Cancelled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Outstanding_Order_Value__c</fullName>
+        <description>Sum of all Order values which are either not delivered or cancelled.</description>
+        <inlineHelpText>Calculated price for not delivered or cancelled line items.</inlineHelpText>
+        <label>Outstanding Order Value</label>
+        <summarizedField>Order_Line_Item__c.Final_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Remaining_Total_Order_Item_Value__c</fullName>
+        <label>Total Order Pending Value</label>
+        <summarizedField>Order_Line_Item__c.Remaining_Price_For_Shipment__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notContain</operation>
+            <value>Delivered, Cancelled, Short Closed</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Short_Close_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Short Close Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Short_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <label>Short Closed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_CGST__c</fullName>
+        <description>This field store total CGST from its Child Object(Order Line Items)</description>
+        <inlineHelpText>Total Central GST</inlineHelpText>
+        <label>Total Pending CGST</label>
+        <summarizedField>Order_Line_Item__c.CGST__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cancelled_Order_Value__c</fullName>
+        <description>This field store total Cancelled order value from its Child Object(Order Line Items)</description>
+        <inlineHelpText>Cancelled Order Value</inlineHelpText>
+        <label>Total Cancelled Order Value</label>
+        <summarizedField>Order_Line_Item__c.Final_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Cash_Discount__c</fullName>
+        <description>This field store Total Cash discount from its child object(Oder Line Items)</description>
+        <label>Total Cash Discount</label>
+        <summarizedField>Order_Line_Item__c.Cash_Discount_CD__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Delivered_Order_Value__c</fullName>
+        <description>This field store total Delivered order Value from its Child Object(Order Line Items)</description>
+        <inlineHelpText>Total Delivered Order value</inlineHelpText>
+        <label>Total Delivered Order Value</label>
+        <summarizedField>Order_Line_Item__c.Final_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Delivered</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Discount__c</fullName>
+        <description>This field store total Discount (Trade Discount+Cash Discount)  from its Child Object(Order Line Items)</description>
+        <label>Total Discount</label>
+        <summarizedField>Order_Line_Item__c.Total_Discount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Order_Quantity__c</fullName>
+        <description>This field store total Quantity from its Child Object(Order Line Items)</description>
+        <label>Total Order Quantity</label>
+        <summarizedField>Order_Line_Item__c.Quantity__c</summarizedField>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Price_After_Discount__c</fullName>
+        <description>This field store Price After Discount (Total Amount -(Trade discount + Cash Discount))  from its Child Object(Order Line Items)</description>
+        <inlineHelpText>Calculated Price after applying all the discounts.</inlineHelpText>
+        <label>Total Price After Discount</label>
+        <summarizedField>Order_Line_Item__c.Price_After_Discount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_SGST__c</fullName>
+        <description>This field store total SGST  from its Child Object(Order Line Items)</description>
+        <inlineHelpText>Total State GST</inlineHelpText>
+        <label>Total Pending SGST</label>
+        <summarizedField>Order_Line_Item__c.SGST__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Trade_Discount__c</fullName>
+        <description>This field store total Trade Discount   from its Child Object(Order Line Items)</description>
+        <label>Total Trade Discount</label>
+        <summarizedField>Order_Line_Item__c.Trade_Discount_TD__c</summarizedField>
+        <summaryFilterItems>
+            <field>Order_Line_Item__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Delivered, Cancelled</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Order_Line_Item__c.Ori_Plast_Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>is_Sales_Order_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag indicates whether or not Navision has received the order.</description>
+        <inlineHelpText>This flag indicates whether or not Navision has received the order.</inlineHelpText>
+        <label>is Sales Order Received?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Ori-Plast Order</label>
+    <nameField>
+        <displayFormat>ON-26-27-{000000}</displayFormat>
+        <label>Ori-Plast Order No</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Ori-Plast Orders</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>NewFromDocument</excludedStandardButtons>
+        <excludedStandardButtons>PrintableListView</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Import</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

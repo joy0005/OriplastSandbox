@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>OriPlast Discount Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>OriPlast Discount Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cash Discount % --></label>
+        <name>Cash_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trade Discount (TD) % --></label>
+        <name>Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ending Date --></label>
+        <name>Ending_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ItemDiscountCode_ExternalKey --></label>
+        <name>ItemDiscountCode_ExternalKey__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item Disc. Group Description --></label>
+        <name>Item_Disc_Group_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Discount % --></label>
+        <name>Line_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Quantity --></label>
+        <name>Minimum_Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Code Description --></label>
+        <name>Sales_Code_Description__c</name>
+        <picklistValues>
+            <masterLabel>Customers of Andhra Pradesh</masterLabel>
+            <translation><!-- Customers of Andhra Pradesh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Assam</masterLabel>
+            <translation><!-- Customers of Assam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Bihar</masterLabel>
+            <translation><!-- Customers of Bihar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Chhattisgarh</masterLabel>
+            <translation><!-- Customers of Chhattisgarh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Jharkhand</masterLabel>
+            <translation><!-- Customers of Jharkhand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Karim Nagar</masterLabel>
+            <translation><!-- Customers of Karim Nagar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Karnataka</masterLabel>
+            <translation><!-- Customers of Karnataka --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Kerala</masterLabel>
+            <translation><!-- Customers of Kerala --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Maharashtra</masterLabel>
+            <translation><!-- Customers of Maharashtra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Nagaland</masterLabel>
+            <translation><!-- Customers of Nagaland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of North India</masterLabel>
+            <translation><!-- Customers of North India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Odisha</masterLabel>
+            <translation><!-- Customers of Odisha --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Tamilnadu</masterLabel>
+            <translation><!-- Customers of Tamilnadu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of Tripura</masterLabel>
+            <translation><!-- Customers of Tripura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customers of West Bengal</masterLabel>
+            <translation><!-- Customers of West Bengal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount for Hyderabad</masterLabel>
+            <translation><!-- Discount for Hyderabad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Govt. Sales</masterLabel>
+            <translation><!-- Govt. Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Institutional Sales</masterLabel>
+            <translation><!-- Institutional Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Discount 10% (Appl) prevaling CDGNID</masterLabel>
+            <translation><!-- Special Discount 10% (Appl) prevaling CDGNID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Discount 33% Aditya Distri.</masterLabel>
+            <translation><!-- Special Discount 33% Aditya Distri. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Discount For Ori-Marketing</masterLabel>
+            <translation><!-- Special Discount For Ori-Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Discount for Sree Bhander prevaling Assam</masterLabel>
+            <translation><!-- Special Discount for Sree Bhander prevaling Assam --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Code --></label>
+        <name>Sales_Code__c</name>
+        <picklistValues>
+            <masterLabel>CDGAP</masterLabel>
+            <translation><!-- CDGAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGASM</masterLabel>
+            <translation><!-- CDGASM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGBH</masterLabel>
+            <translation><!-- CDGBH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGCH</masterLabel>
+            <translation><!-- CDGCH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGJH</masterLabel>
+            <translation><!-- CDGJH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGKA</masterLabel>
+            <translation><!-- CDGKA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGKN</masterLabel>
+            <translation><!-- CDGKN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGKR</masterLabel>
+            <translation><!-- CDGKR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGMH</masterLabel>
+            <translation><!-- CDGMH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGNG</masterLabel>
+            <translation><!-- CDGNG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGNID</masterLabel>
+            <translation><!-- CDGNID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGOR</masterLabel>
+            <translation><!-- CDGOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGOVT</masterLabel>
+            <translation><!-- CDGOVT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGTN</masterLabel>
+            <translation><!-- CDGTN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGTR</masterLabel>
+            <translation><!-- CDGTR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDGWB</masterLabel>
+            <translation><!-- CDGWB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CDINST</masterLabel>
+            <translation><!-- CDINST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HYDDIS</masterLabel>
+            <translation><!-- HYDDIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPL10</masterLabel>
+            <translation><!-- SPL10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPL33</masterLabel>
+            <translation><!-- SPL33 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPLORI</masterLabel>
+            <translation><!-- SPLORI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPLSREE</masterLabel>
+            <translation><!-- SPLSREE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Special Discount % --></label>
+        <name>Special_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starting Date --></label>
+        <name>Starting_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>OriPlast Discount Mapping Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

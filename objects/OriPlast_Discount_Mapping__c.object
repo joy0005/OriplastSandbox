@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Cash_Discount__c</fullName>
+        <description>This Field Store Cash Discount For a Product</description>
+        <label>Cash Discount %</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <description>This field stored TD For a product</description>
+        <label>Trade Discount (TD) %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Ending_Date__c</fullName>
+        <description>This Field Store Ending Date From Product to Product Price</description>
+        <label>Ending Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ItemDiscountCode_ExternalKey__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>This Field Store combined Value of (Account.Customer Disc. Group_Product.Item Disc. Group)</description>
+        <externalId>true</externalId>
+        <label>ItemDiscountCode_ExternalKey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Item_Disc_Group_Description__c</fullName>
+        <description>This Field store Product Name</description>
+        <externalId>false</externalId>
+        <label>Item Disc. Group Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Discount__c</fullName>
+        <label>Line Discount %</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Quantity</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Code_Description__c</fullName>
+        <label>Sales Code Description</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Customers of Andhra Pradesh</fullName>
+                    <default>false</default>
+                    <label>Customers of Andhra Pradesh</label>
+                </value>
+                <value>
+                    <fullName>Customers of Assam</fullName>
+                    <default>false</default>
+                    <label>Customers of Assam</label>
+                </value>
+                <value>
+                    <fullName>Customers of Bihar</fullName>
+                    <default>false</default>
+                    <label>Customers of Bihar</label>
+                </value>
+                <value>
+                    <fullName>Customers of Chhattisgarh</fullName>
+                    <default>false</default>
+                    <label>Customers of Chhattisgarh</label>
+                </value>
+                <value>
+                    <fullName>Customers of Jharkhand</fullName>
+                    <default>false</default>
+                    <label>Customers of Jharkhand</label>
+                </value>
+                <value>
+                    <fullName>Customers of Kerala</fullName>
+                    <default>false</default>
+                    <label>Customers of Kerala</label>
+                </value>
+                <value>
+                    <fullName>Customers of Karim Nagar</fullName>
+                    <default>false</default>
+                    <label>Customers of Karim Nagar</label>
+                </value>
+                <value>
+                    <fullName>Customers of Karnataka</fullName>
+                    <default>false</default>
+                    <label>Customers of Karnataka</label>
+                </value>
+                <value>
+                    <fullName>Customers of Maharashtra</fullName>
+                    <default>false</default>
+                    <label>Customers of Maharashtra</label>
+                </value>
+                <value>
+                    <fullName>Customers of Nagaland</fullName>
+                    <default>false</default>
+                    <label>Customers of Nagaland</label>
+                </value>
+                <value>
+                    <fullName>Customers of North India</fullName>
+                    <default>false</default>
+                    <label>Customers of North India</label>
+                </value>
+                <value>
+                    <fullName>Customers of Odisha</fullName>
+                    <default>false</default>
+                    <label>Customers of Odisha</label>
+                </value>
+                <value>
+                    <fullName>Govt. Sales</fullName>
+                    <default>false</default>
+                    <label>Govt. Sales</label>
+                </value>
+                <value>
+                    <fullName>Customers of Tamilnadu</fullName>
+                    <default>false</default>
+                    <label>Customers of Tamilnadu</label>
+                </value>
+                <value>
+                    <fullName>Customers of Tripura</fullName>
+                    <default>false</default>
+                    <label>Customers of Tripura</label>
+                </value>
+                <value>
+                    <fullName>Customers of West Bengal</fullName>
+                    <default>false</default>
+                    <label>Customers of West Bengal</label>
+                </value>
+                <value>
+                    <fullName>Institutional Sales</fullName>
+                    <default>false</default>
+                    <label>Institutional Sales</label>
+                </value>
+                <value>
+                    <fullName>Discount for Hyderabad</fullName>
+                    <default>false</default>
+                    <label>Discount for Hyderabad</label>
+                </value>
+                <value>
+                    <fullName>Special Discount 10% (Appl) prevaling CDGNID</fullName>
+                    <default>false</default>
+                    <label>Special Discount 10% (Appl) prevaling CDGNID</label>
+                </value>
+                <value>
+                    <fullName>Special Discount 33% Aditya Distri.</fullName>
+                    <default>false</default>
+                    <label>Special Discount 33% Aditya Distri.</label>
+                </value>
+                <value>
+                    <fullName>Special Discount For Ori-Marketing</fullName>
+                    <default>false</default>
+                    <label>Special Discount For Ori-Marketing</label>
+                </value>
+                <value>
+                    <fullName>Special Discount for Sree Bhander prevaling Assam</fullName>
+                    <default>false</default>
+                    <label>Special Discount for Sree Bhander prevaling Assam</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sales_Code__c</fullName>
+        <label>Sales Code</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CDGAP</fullName>
+                    <default>false</default>
+                    <label>CDGAP</label>
+                </value>
+                <value>
+                    <fullName>CDGASM</fullName>
+                    <default>false</default>
+                    <label>CDGASM</label>
+                </value>
+                <value>
+                    <fullName>CDGBH</fullName>
+                    <default>false</default>
+                    <label>CDGBH</label>
+                </value>
+                <value>
+                    <fullName>CDGCH</fullName>
+                    <default>false</default>
+                    <label>CDGCH</label>
+                </value>
+                <value>
+                    <fullName>CDGJH</fullName>
+                    <default>false</default>
+                    <label>CDGJH</label>
+                </value>
+                <value>
+                    <fullName>CDGKA</fullName>
+                    <default>false</default>
+                    <label>CDGKA</label>
+                </value>
+                <value>
+                    <fullName>CDGKN</fullName>
+                    <default>false</default>
+                    <label>CDGKN</label>
+                </value>
+                <value>
+                    <fullName>CDGKR</fullName>
+                    <default>false</default>
+                    <label>CDGKR</label>
+                </value>
+                <value>
+                    <fullName>CDGMH</fullName>
+                    <default>false</default>
+                    <label>CDGMH</label>
+                </value>
+                <value>
+                    <fullName>CDGNG</fullName>
+                    <default>false</default>
+                    <label>CDGNG</label>
+                </value>
+                <value>
+                    <fullName>CDGNID</fullName>
+                    <default>false</default>
+                    <label>CDGNID</label>
+                </value>
+                <value>
+                    <fullName>CDGOR</fullName>
+                    <default>false</default>
+                    <label>CDGOR</label>
+                </value>
+                <value>
+                    <fullName>CDGOVT</fullName>
+                    <default>false</default>
+                    <label>CDGOVT</label>
+                </value>
+                <value>
+                    <fullName>CDGTN</fullName>
+                    <default>false</default>
+                    <label>CDGTN</label>
+                </value>
+                <value>
+                    <fullName>CDGTR</fullName>
+                    <default>false</default>
+                    <label>CDGTR</label>
+                </value>
+                <value>
+                    <fullName>CDGWB</fullName>
+                    <default>false</default>
+                    <label>CDGWB</label>
+                </value>
+                <value>
+                    <fullName>CDINST</fullName>
+                    <default>false</default>
+                    <label>CDINST</label>
+                </value>
+                <value>
+                    <fullName>HYDDIS</fullName>
+                    <default>false</default>
+                    <label>HYDDIS</label>
+                </value>
+                <value>
+                    <fullName>SPL10</fullName>
+                    <default>false</default>
+                    <label>SPL10</label>
+                </value>
+                <value>
+                    <fullName>SPL33</fullName>
+                    <default>false</default>
+                    <label>SPL33</label>
+                </value>
+                <value>
+                    <fullName>SPLORI</fullName>
+                    <default>false</default>
+                    <label>SPLORI</label>
+                </value>
+                <value>
+                    <fullName>SPLSREE</fullName>
+                    <default>false</default>
+                    <label>SPLSREE</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Special_Discount__c</fullName>
+        <description>This field made for if in future there are special discount for a product</description>
+        <label>Special Discount %</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Starting_Date__c</fullName>
+        <description>This Field Store Starting Date From Product to Product Price</description>
+        <label>Starting Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>OriPlast Discount Mapping</label>
+    <nameField>
+        <label>Discount Maping Name</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>OriPlast Discount Mappings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

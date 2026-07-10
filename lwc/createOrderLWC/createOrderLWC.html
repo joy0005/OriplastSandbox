@@ -1,0 +1,410 @@
+<template>
+    <!-- Loading Animation -->
+    <template if:true={isLoading}>
+        <div class="loading-overlay">
+            <div class="spinner-container">
+                <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+                <div class="loading-text">Loading your products...</div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Main Container -->
+    <div class="main-container slds-p-around_large">
+        <!-- 🔒 ACCOUNT LOCKED (Edit Order) -->
+        <template if:true={isAccountLocked}>
+            <div class="glass-card slds-m-bottom_large">
+                <div class="card-header slds-p-around_medium">
+                    <h2 class="card-title">Account</h2>
+                </div>
+
+                <div class="slds-p-around_medium">
+                    <lightning-input label="Account" value={accountName} disabled>
+                    </lightning-input>
+                </div>
+            </div>
+        </template>
+
+        <!-- 🔓 ACCOUNT SELECTABLE (Create Order) -->
+        <template if:false={isAccountLocked}>
+            <div class="glass-card slds-m-bottom_large">
+                <div class="card-header slds-p-around_medium">
+                    <h2 class="card-title">Account Selection</h2>
+                </div>
+
+                <div class="slds-p-around_medium">
+                    <lightning-combobox label="Select Distributor" options={distributorAccountOptions}
+                        onchange={handleDistributorChange} value={selectedDistributorValue}>
+                    </lightning-combobox>
+                </div>
+            </div>
+        </template>
+
+        <!-- Partial Orders Warning -->
+        <template if:true={showPartialOrders}>
+            <div class="glass-card slds-m-bottom_large animate-fade-in">
+                <div class="card-header slds-p-around_medium">
+                    <h2 class="card-title">
+                        <lightning-icon icon-name="standard:orders" size="small"
+                            class="slds-m-right_x-small"></lightning-icon>
+                        <!-- Partially Delivered Orders -->
+                         Pending Order Details
+                    </h2>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Order No</th>
+                                <th>Order Date</th>
+                                <th>Total Value</th>
+                                <th>Remaining Value</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={partiallyDeliveredOrders} for:item="order">
+                                <tr key={order.Id}>
+                                    <td>
+                                        <a href="javascript:void(0)" onclick={navigateToOrder} data-id={order.Id}
+                                            class="order-link">
+                                            {order.Name}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <lightning-formatted-date-time value={order.CreatedDate} year="numeric"
+                                            month="short" day="2-digit">
+                                        </lightning-formatted-date-time>
+                                    </td>
+                                    <td>₹ {order.Final_Order_Value__c}</td>
+                                    <td>
+                                        <span class="status-pill warning">
+                                            {order.Remaining_Total_Order_Item_Value__c}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="status-pill warning">
+                                            {order.Order_Status__c}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </template>
+
+        <!-- Outstanding Warning -->
+        <template if:false={corretctTotalOutstandingValue}>
+            <div class="warning-card animate-shake">
+                <div class="warning-icon">
+                    <lightning-icon icon-name="utility:warning" size="small"></lightning-icon>
+                </div>
+                <div class="warning-content">
+                    <h3 class="slds-text-heading_small">Outstanding Limit Exceeded</h3>
+                    <p>Your outstanding order value exceeds ₹30 Lacs. Please clear some outstanding orders before
+                        placing new orders.</p>
+                </div>
+            </div>
+        </template>
+
+        <!-- Product Filters -->
+        <template if:true={showAttributes}>
+            <div class="glass-card slds-m-bottom_large animate-slide-up">
+                <div class="card-header slds-p-around_medium">
+                    <h2 class="card-title">
+                        <lightning-icon icon-name="utility:filter" size="small"
+                            class="slds-m-right_x-small"></lightning-icon>
+                        Filter Products
+                    </h2>
+                </div>
+                <div class="slds-grid slds-wrap slds-p-around_medium">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-horizontal_small">
+                        <lightning-combobox name="category" label="Category" placeholder="Select Category"
+                            options={CategoryOptions} onchange={handleCategoryChange} class="modern-combobox">
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-horizontal_small">
+                        <lightning-combobox name="sub category" label="Sub Category" placeholder="Select Sub Category"
+                            options={SubcategoryOptions} onchange={handleSubCategoryChange} class="modern-combobox"
+                            disabled={isSubCategoryDisabled}>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-p-horizontal_small">
+                        <lightning-combobox name="identifier" label="Identifier" placeholder="Select Identifier"
+                            options={IdentifierOptions} class="modern-combobox" onchange={handleIdentifierChange}
+                            disabled={isIdentifierDisabled}>
+                        </lightning-combobox>
+                    </div>
+                    <div
+                        class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-p-horizontal_small slds-m-top_medium">
+                        <div class="search-container">
+                            <lightning-input type="search" placeholder="Search by product name..." value={searchTerm}
+                                onchange={handleSearchChange} class="modern-search" variant="label-hidden">
+                            </lightning-input>
+                            <lightning-icon icon-name="utility:search" size="small"
+                                class="search-icon"></lightning-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Product List -->
+        <template if:true={showRecomendedProductList}>
+            <div class="product-list-container glass-card animate-fade-in">
+                <template if:false={filteredProductList.length}>
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <lightning-icon icon-name="utility:error" size="large"></lightning-icon>
+                        </div>
+                        <h2 class="slds-text-heading_medium slds-m-vertical_medium">No Products Found</h2>
+                        <p class="slds-text-body_regular">Try adjusting your filters or search criteria</p>
+                    </div>
+                </template>
+
+                <template if:true={filteredProductList.length}>
+                    <div class="table-header">
+
+                        <!-- Left -->
+                        <div class="table-title">
+                            <h2 class="slds-text-heading_medium">
+                                <lightning-icon icon-name="utility:products" size="small"
+                                    class="slds-m-right_x-small"></lightning-icon>
+                                All Products ({displayedListLengthProduct})
+                            </h2>
+                        </div>
+                        <div class="selection-summary">
+                            <lightning-input type="checkbox" label="Select All (This Page)"
+                                checked={isSelectAllCheckedForAllProduct} onchange={handleSelectAllChange}>
+                            </lightning-input>
+
+                            <span class="selection-count">{selectedCount} item(s) selected</span>
+                        </div>
+
+
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" style="width: 80px">
+                                        <div class="th-content">Select</div>
+                                    </th>
+                                    <th>
+                                        <div class="th-content">
+                                            <div class="th-title">Product Name</div>
+                                            <div class="search-th">
+                                                <lightning-input type="search" placeholder="Filter by name..."
+                                                    value={searchTerm} onchange={handleSearchChange}
+                                                    variant="label-hidden" class="inline-search">
+                                                </lightning-input>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th class="text-center">
+                                        <div class="th-content">Product Unique Key</div>
+                                    </th>
+                                    <th class="text-center">
+                                        <div class="th-content">Product Category</div>
+                                    </th>
+                                    <th class="text-center">
+                                        <div class="th-content">Product Sub Category</div>
+                                    </th>
+                                    <th class="text-center">
+                                        <div class="th-content">Unit of Measure</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={filteredProductList} for:item="product" for:index="index">
+                                    <tr key={product.key} class="table-row">
+                                        <td class="text-center">
+                                            <div class="checkbox-wrapper">
+                                                <lightning-input type="checkbox" data-index={index}
+                                                    onchange={handleCheckboxChange} checked={product.selected}>
+                                                </lightning-input>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="product-name">
+                                                <span class="name-text">{product.productName}</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="type-badge">{product.oriPlast_Product_Unique_Key}</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="type-badge type-badge-yellow">{product.productCategory}</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="type-badge type-badge-green">{product.productSubCategory}</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <span class="size-badge">{product.unitOfMeasurement}</span>
+                                        </td>
+                                        <!-- <td class="text-center">
+                                            <div class="stock-indicator">
+                                                <span class="stock-value">{product.instockQuantity}</span>
+                                                <div class="stock-bar">
+                                                    <div class="stock-fill">{product.instockQuantity}</div>
+                                                </div>
+                                            </div>
+                                        </td> -->
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-container" if:true={showButtonForAllProduct}>
+                        <div class="pagination-controls">
+                            <lightning-button label="Previous" variant="neutral" icon-name="utility:chevronleft"
+                                onclick={previousHandlerForAllProduct} disabled={disablePreviousForAllProduct}
+                                class="pagination-btn">
+                            </lightning-button>
+
+                            <div class="page-info">
+                                <span class="current-page">{currentPageForAllProduct}</span>
+                                <span class="page-separator">of</span>
+                                <span class="total-pages">{totalPageForAllProduct}</span>
+                            </div>
+
+                            <lightning-button label="Next" variant="neutral" icon-name="utility:chevronright"
+                                icon-position="right" onclick={nextHandlerForAllProduct}
+                                disabled={disableNextForAllProduct} class="pagination-btn">
+                            </lightning-button>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <!-- Selected Products Summary -->
+        <template if:true={isSelectionMade}>
+            <div class="selected-products-container glass-card animate-slide-up">
+                <div class="selection-header">
+                    <h2 class="slds-text-heading_medium">
+                        <lightning-icon icon-name="utility:check" size="small"
+                            class="slds-m-right_x-small"></lightning-icon>
+                        Selected Products ({AllSelectedProducts.length})
+                    </h2>
+                    <lightning-button variant="brand" label="Proceed to Order" onclick={handleProceed}
+                        icon-name="utility:forward" icon-position="right" class="proceed-btn">
+                    </lightning-button>
+                </div>
+
+                <div class="selected-products-grid">
+                    <template for:each={AllSelectedProducts} for:item="product" for:index="index">
+                        <div key={product.productId} class="selected-product-card">
+                            <div class="product-number">{product.slNo}</div>
+                            <div class="product-details">
+                                <div class="product-name">{product.productName}</div>
+                                <div class="product-meta">
+                                    <span class="meta-item">{product.productType}</span>
+                                    <span class="meta-item">{product.productSize}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <template if:true={isModalOpen}>
+        <div class="modal-overlay slds-backdrop slds-fade-in-open"></div>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open modal-container">
+            <div class="slds-modal__container full-screen-modal">
+                <header class="modal-header">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse slds-modal__close"
+                        title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close"
+                            size="small"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading_medium">Proceed with Selected Product(s)</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium"  style="overflow: hidden;">
+                    <div class="modal-table-wrapper">
+                        <template if:true={selectedProductList.length}>
+                            <table class="modal-table">
+                                <thead>
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <th>Unit Of Measurement ( Order Line Item )</th>
+                                        <th>Unit Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total Price After Discount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <template for:each={selectedProductList} for:item="product" for:index="index">
+                                        <tr key={product.Id} class="modal-table-row">
+                                            <td>
+                                                <div class="product-cell">{product.Name}</div>
+                                            </td>
+                                            <td>
+                                                <div class="product-cell">{product.unitOfMeasure}</div>
+                                            </td>
+                                            <td>
+                                                <div class="product-cell">{product.unitPrice}</div>
+                                            </td>
+                                            <td>
+                                                <div class="quantity-cell">
+                                                    <input type="number" min="1" value={product.quantity} required
+                                                        onchange={handleQuantityChange} class="quantity-input"
+                                                        data-id={product.Id} />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="total-price-cell">
+                                                    <input type="number" value={product.totalPrice} disabled
+                                                        class="total-input" data-id={product.Id} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                            <div class="order-summary">
+                                <div class="total-order-value">
+                                    Total Order Value: <span class="total-amount">{allTotalPrice}</span>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <footer class="modal-footer">
+                    <button class="modal-btn cancel-btn" onclick={closeModal}>Cancel</button>
+                    <button class="modal-btn confirm-btn" onclick={confirmProceed}>Submit</button>
+                </footer>
+            </div>
+        </section>
+    </template>
+
+    <!-- Important Message Modal -->
+    <template if:true={showReturnedValue}>
+        <div class="modal-overlay slds-backdrop slds-fade-in-open"></div>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open message-modal">
+            <div class="slds-modal__container message-modal-container">
+                <header class="message-header">
+                    <h2 class="slds-text-heading_medium">Important Message</h2>
+                </header>
+                <div class="message-content">
+                    <div class="message-text">
+                        {returnedValueFromApex}
+                    </div>
+                </div>
+                <footer class="message-footer">
+                    <lightning-button variant="destructive" label="Close" onclick={handlecloseModal}></lightning-button>
+                </footer>
+            </div>
+        </section>
+    </template>
+</template>

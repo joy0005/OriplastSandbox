@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CURRENT_MONTH_REPORT_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CURRENT_MONTH_REPORT_ID</shortDescription>
+        <value>00Ofv000009IHwaEAG</value>
+    </labels>
+    <labels>
+        <fullName>CURRENT_WEEK_REPORT_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CURRENT_WEEK_REPORT_ID</shortDescription>
+        <value>00Ofv000009HyyjEAC</value>
+    </labels>
+    <labels>
+        <fullName>Current_Limit_for_Account</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Current Limit for Account</shortDescription>
+        <value>3000000</value>
+    </labels>
+    <labels>
+        <fullName>PerPageInventoryProducts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PerPageInventoryProducts</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>PerPageProducts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PerPageProducts</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>Prod_Lightning_Base_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prod_Lightning_Base_URL</shortDescription>
+        <value>https://oriplastltd.lightning.force.com</value>
+    </labels>
+    <labels>
+        <fullName>Short_Close_Reason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Short Close Reason</shortDescription>
+        <value>Closing the order because it is in draft state form more than 7 days.</value>
+    </labels>
+    <labels>
+        <fullName>Short_Closing_Reason</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Short Closing Reason</shortDescription>
+        <value>Closing the order because it is in draft status more than the 7 days.</value>
+    </labels>
+</CustomLabels>

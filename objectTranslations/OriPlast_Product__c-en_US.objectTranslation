@@ -1,0 +1,2486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ori-Plast Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ori-Plast Products</value>
+    </caseValues>
+    <fields>
+        <help><!-- It is used for entering Base unit of measure. --></help>
+        <label><!-- Base Unit of Measure --></label>
+        <name>Base_Unit_of_Measure__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is a picklist field for choosing type of category. --></help>
+        <label><!-- Category --></label>
+        <name>Category_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>CASING &amp; PVC Casing Pipes as per IS : 12818</masterLabel>
+            <translation><!-- CASING &amp; PVC Casing Pipes as per IS : 12818 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPVC Pipe</masterLabel>
+            <translation><!-- CPVC Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Action Hand Pump Fittings</masterLabel>
+            <translation><!-- Direct Action Hand Pump Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Action Hand Pump Set</masterLabel>
+            <translation><!-- Direct Action Hand Pump Set --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GI STANDERD &amp; PLB Duct Pipe</masterLabel>
+            <translation><!-- GI STANDERD &amp; PLB Duct Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE 4984-2016</masterLabel>
+            <translation><!-- HDPE 4984-2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE Copper Wire</masterLabel>
+            <translation><!-- HDPE Copper Wire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE Fittings</masterLabel>
+            <translation><!-- HDPE Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE IS 4427 (Blue/Black)</masterLabel>
+            <translation><!-- HDPE IS 4427 (Blue/Black) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE Pipe IS 14333 (Black)</masterLabel>
+            <translation><!-- HDPE Pipe IS 14333 (Black) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE Pipe IS 4984 (Black)</masterLabel>
+            <translation><!-- HDPE Pipe IS 4984 (Black) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MDPE Fittings</masterLabel>
+            <translation><!-- MDPE Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MDPE Pipe &amp; MDPE IS 14885</masterLabel>
+            <translation><!-- MDPE Pipe &amp; MDPE IS 14885 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MDPE pipe &amp; MDPE IS 4427</masterLabel>
+            <translation><!-- MDPE pipe &amp; MDPE IS 4427 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPVC Fittings</masterLabel>
+            <translation><!-- OPVC Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPVC Pipe</masterLabel>
+            <translation><!-- OPVC Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE PIPE(MDPE)</masterLabel>
+            <translation><!-- PE PIPE(MDPE) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PPR</masterLabel>
+            <translation><!-- PPR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC Column Pipe</masterLabel>
+            <translation><!-- PVC Column Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC Fittings</masterLabel>
+            <translation><!-- PVC Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC GARDEN HOSE PIPE</masterLabel>
+            <translation><!-- PVC GARDEN HOSE PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC Grey pipes as per IS : 4985,UPVC IS 4985</masterLabel>
+            <translation><!-- PVC Grey pipes as per IS : 4985,UPVC IS 4985 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC Pipe ASTM-D-1785, PVC ASTM (Schdule)</masterLabel>
+            <translation><!-- PVC Pipe ASTM-D-1785, PVC ASTM (Schdule) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC SCREEN &amp; PVC Screen Pipes as per IS : 12818</masterLabel>
+            <translation><!-- PVC SCREEN &amp; PVC Screen Pipes as per IS : 12818 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC SWR pipes &amp; fittings (non-standard)</masterLabel>
+            <translation><!-- PVC SWR pipes &amp; fittings (non-standard) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC SWR pipes &amp; fittings as per IS:13592</masterLabel>
+            <translation><!-- PVC SWR pipes &amp; fittings as per IS:13592 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC Submersible</masterLabel>
+            <translation><!-- PVC Submersible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solvent Cement</masterLabel>
+            <translation><!-- Solvent Cement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WATER TANK and FITTINGS</masterLabel>
+            <translation><!-- WATER TANK and FITTINGS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category (Text) --></label>
+        <name>Category__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for entering Product Color --></help>
+        <label><!-- Colour --></label>
+        <name>Colour__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is a Description field about Product --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for entering GST Credit --></help>
+        <label><!-- GST Credit --></label>
+        <name>GST_Credit__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for GST Group Code --></help>
+        <label><!-- GST Group Code --></label>
+        <name>GST_Group_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- GST Value --></label>
+        <name>GST_Value__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for entering General Product Posting Group. --></help>
+        <label><!-- Gen. Prod. Posting Group --></label>
+        <name>Gen_Prod_Posting_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- it is used for entering Code of HSN/SAC --></help>
+        <label><!-- HSN/SAC Code --></label>
+        <name>HSN_SAC_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identifier (Text) --></label>
+        <name>Identifier__c</name>
+    </fields>
+    <fields>
+        <help><!-- This is for entering unique identity. --></help>
+        <label><!-- Identifier --></label>
+        <name>Identifire_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>10kgf/sq</masterLabel>
+            <translation><!-- 10kgf/sq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12.5kgf/sq</masterLabel>
+            <translation><!-- 12.5kgf/sq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2.5kgf/sq</masterLabel>
+            <translation><!-- 2.5kgf/sq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45DY0</masterLabel>
+            <translation><!-- 45DY0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4kgf/sq</masterLabel>
+            <translation><!-- 4kgf/sq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6kgf/sq</masterLabel>
+            <translation><!-- 6kgf/sq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6kgf/sq Elastomeric Pipe</masterLabel>
+            <translation><!-- 6kgf/sq Elastomeric Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8kgf/sq</masterLabel>
+            <translation><!-- 8kgf/sq --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AIRCP</masterLabel>
+            <translation><!-- AIRCP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL576</masterLabel>
+            <translation><!-- AL576 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASTE0</masterLabel>
+            <translation><!-- ASTE0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASTEE</masterLabel>
+            <translation><!-- ASTEE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adaptor</masterLabel>
+            <translation><!-- Adaptor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adhesive Heavy</masterLabel>
+            <translation><!-- Adhesive Heavy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adopter CM</masterLabel>
+            <translation><!-- Adopter CM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BCWSH</masterLabel>
+            <translation><!-- BCWSH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BE225</masterLabel>
+            <translation><!-- BE225 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BE450</masterLabel>
+            <translation><!-- BE450 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BEND0</masterLabel>
+            <translation><!-- BEND0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRLCY</masterLabel>
+            <translation><!-- BRLCY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BTCON</masterLabel>
+            <translation><!-- BTCON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ball Valve</masterLabel>
+            <translation><!-- Ball Valve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ball Valve (Union Ended)</masterLabel>
+            <translation><!-- Ball Valve (Union Ended) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ball Valve CPVC Concealed Stop Cock</masterLabel>
+            <translation><!-- Ball Valve CPVC Concealed Stop Cock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ball Valve SS Handle</masterLabel>
+            <translation><!-- Ball Valve SS Handle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend</masterLabel>
+            <translation><!-- Bend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 105 Deg</masterLabel>
+            <translation><!-- Bend 105 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 11 1/4 Deg</masterLabel>
+            <translation><!-- Bend 11 1/4 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 120 Deg</masterLabel>
+            <translation><!-- Bend 120 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 135 Deg</masterLabel>
+            <translation><!-- Bend 135 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 148 Deg</masterLabel>
+            <translation><!-- Bend 148 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 15 Deg</masterLabel>
+            <translation><!-- Bend 15 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 150 Deg</masterLabel>
+            <translation><!-- Bend 150 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 22 1/2 Deg</masterLabel>
+            <translation><!-- Bend 22 1/2 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 30 Deg</masterLabel>
+            <translation><!-- Bend 30 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 35 Deg</masterLabel>
+            <translation><!-- Bend 35 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 45 Deg</masterLabel>
+            <translation><!-- Bend 45 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 60 Deg</masterLabel>
+            <translation><!-- Bend 60 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend 90 Deg</masterLabel>
+            <translation><!-- Bend 90 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend R/R</masterLabel>
+            <translation><!-- Bend R/R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend R/R Door</masterLabel>
+            <translation><!-- Bend R/R Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend S/C</masterLabel>
+            <translation><!-- Bend S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bend Threaded</masterLabel>
+            <translation><!-- Bend Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bibcock</masterLabel>
+            <translation><!-- Bibcock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blind Flange</masterLabel>
+            <translation><!-- Blind Flange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Female Tee</masterLabel>
+            <translation><!-- Brass Female Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Insert Elbow</masterLabel>
+            <translation><!-- Brass Insert Elbow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Insert FTA</masterLabel>
+            <translation><!-- Brass Insert FTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Insert Female Elbow</masterLabel>
+            <translation><!-- Brass Insert Female Elbow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Inserted MTA</masterLabel>
+            <translation><!-- Brass Inserted MTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Inserted Reducing Socket</masterLabel>
+            <translation><!-- Brass Inserted Reducing Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Inserted Tee</masterLabel>
+            <translation><!-- Brass Inserted Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Male Adopter Hexa</masterLabel>
+            <translation><!-- Brass Male Adopter Hexa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Threaded Male Elbow</masterLabel>
+            <translation><!-- Brass Threaded Male Elbow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Three Elbow I Female</masterLabel>
+            <translation><!-- Brass Three Elbow I Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Three Elbow II Female</masterLabel>
+            <translation><!-- Brass Three Elbow II Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass Three Elbow III Female</masterLabel>
+            <translation><!-- Brass Three Elbow III Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass inserted Female Adopter</masterLabel>
+            <translation><!-- Brass inserted Female Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brass inserted Male Adopter</masterLabel>
+            <translation><!-- Brass inserted Male Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bucket Washer</masterLabel>
+            <translation><!-- Bucket Washer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Butterfly Valve ( Gear Type )</masterLabel>
+            <translation><!-- Butterfly Valve ( Gear Type ) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Butterfly Valve ( Lever Type )</masterLabel>
+            <translation><!-- Butterfly Valve ( Lever Type ) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CABSP</masterLabel>
+            <translation><!-- CABSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CASING PIPE 5 MM</masterLabel>
+            <translation><!-- CASING PIPE 5 MM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CASING PIPE 5.2</masterLabel>
+            <translation><!-- CASING PIPE 5.2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CD M/F</masterLabel>
+            <translation><!-- CD M/F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CICTP</masterLabel>
+            <translation><!-- CICTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL00M</masterLabel>
+            <translation><!-- CL00M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL00S</masterLabel>
+            <translation><!-- CL00S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL03F</masterLabel>
+            <translation><!-- CL03F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL03M</masterLabel>
+            <translation><!-- CL03M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL03S</masterLabel>
+            <translation><!-- CL03S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLF00</masterLabel>
+            <translation><!-- CLF00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLSA0</masterLabel>
+            <translation><!-- CLSA0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM ISI</masterLabel>
+            <translation><!-- CM ISI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM M/F</masterLabel>
+            <translation><!-- CM M/F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM M/F SCREEN PIPE</masterLabel>
+            <translation><!-- CM M/F SCREEN PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CM M/T</masterLabel>
+            <translation><!-- CM M/T --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COLTY</masterLabel>
+            <translation><!-- COLTY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COMBS</masterLabel>
+            <translation><!-- COMBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CONTA</masterLabel>
+            <translation><!-- CONTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COTY0</masterLabel>
+            <translation><!-- COTY0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COUP0</masterLabel>
+            <translation><!-- COUP0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPPLB</masterLabel>
+            <translation><!-- CPPLB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPVC Gate Valve</masterLabel>
+            <translation><!-- CPVC Gate Valve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRTE0</masterLabel>
+            <translation><!-- CRTE0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CS ISI</masterLabel>
+            <translation><!-- CS ISI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CS M/F</masterLabel>
+            <translation><!-- CS M/F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CS M/T</masterLabel>
+            <translation><!-- CS M/T --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT100</masterLabel>
+            <translation><!-- CT100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CUPSL</masterLabel>
+            <translation><!-- CUPSL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYBCP</masterLabel>
+            <translation><!-- CYBCP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYPAS</masterLabel>
+            <translation><!-- CYPAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CYPIP</masterLabel>
+            <translation><!-- CYPIP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Camlock 45 Lead &amp; Tin</masterLabel>
+            <translation><!-- Camlock 45 Lead &amp; Tin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Camlock 90 Lead &amp; Tin</masterLabel>
+            <translation><!-- Camlock 90 Lead &amp; Tin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cap MDPE</masterLabel>
+            <translation><!-- Cap MDPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check Valve</masterLabel>
+            <translation><!-- Check Valve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check Valve Seat</masterLabel>
+            <translation><!-- Check Valve Seat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning</masterLabel>
+            <translation><!-- Cleaning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning Pipe (R/R Type)</masterLabel>
+            <translation><!-- Cleaning Pipe (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning S/C</masterLabel>
+            <translation><!-- Cleaning S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Column Socket</masterLabel>
+            <translation><!-- Column Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concentric Reducer</masterLabel>
+            <translation><!-- Concentric Reducer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coupler</masterLabel>
+            <translation><!-- Coupler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coupler 3 NB</masterLabel>
+            <translation><!-- Coupler 3 NB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coupler Lead Free</masterLabel>
+            <translation><!-- Coupler Lead Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross</masterLabel>
+            <translation><!-- Cross --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cross Tee</masterLabel>
+            <translation><!-- Cross Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEBE0</masterLabel>
+            <translation><!-- DEBE0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIBEN</masterLabel>
+            <translation><!-- DIBEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DITEE</masterLabel>
+            <translation><!-- DITEE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DRCRR</masterLabel>
+            <translation><!-- DRCRR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS045</masterLabel>
+            <translation><!-- DS045 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS090</masterLabel>
+            <translation><!-- DS090 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS125</masterLabel>
+            <translation><!-- DS125 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DS225</masterLabel>
+            <translation><!-- DS225 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DSBEN</masterLabel>
+            <translation><!-- DSBEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DSCT0</masterLabel>
+            <translation><!-- DSCT0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Door Bend (L/H)(R/R Type)</masterLabel>
+            <translation><!-- Door Bend (L/H)(R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Door Bend R/R</masterLabel>
+            <translation><!-- Door Bend R/R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Door Bend S/C</masterLabel>
+            <translation><!-- Door Bend S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Door Cap (R/R Type)</masterLabel>
+            <translation><!-- Door Cap (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Door bend</masterLabel>
+            <translation><!-- Door bend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double T R/R</masterLabel>
+            <translation><!-- Double T R/R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double T S/C</masterLabel>
+            <translation><!-- Double T S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double T with Door (R/R Type)</masterLabel>
+            <translation><!-- Double T with Door (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double T with Door S/C</masterLabel>
+            <translation><!-- Double T with Door S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Y (R/R Type)</masterLabel>
+            <translation><!-- Double Y (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Y S/C</masterLabel>
+            <translation><!-- Double Y S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Y with Door</masterLabel>
+            <translation><!-- Double Y with Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Y with Door (R/R Type)</masterLabel>
+            <translation><!-- Double Y with Door (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Y with Door S/C</masterLabel>
+            <translation><!-- Double Y with Door S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EC010</masterLabel>
+            <translation><!-- EC010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ECO COLUMN PIPE</masterLabel>
+            <translation><!-- ECO COLUMN PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EL225</masterLabel>
+            <translation><!-- EL225 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EL900</masterLabel>
+            <translation><!-- EL900 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EPPLB</masterLabel>
+            <translation><!-- EPPLB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EQT11</masterLabel>
+            <translation><!-- EQT11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ET000</masterLabel>
+            <translation><!-- ET000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ET006</masterLabel>
+            <translation><!-- ET006 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ET010</masterLabel>
+            <translation><!-- ET010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EX CASING PIPE</masterLabel>
+            <translation><!-- EX CASING PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EX SAND TRAP</masterLabel>
+            <translation><!-- EX SAND TRAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EX SCREEN PIPE</masterLabel>
+            <translation><!-- EX SCREEN PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow</masterLabel>
+            <translation><!-- Elbow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow 135 Deg</masterLabel>
+            <translation><!-- Elbow 135 Deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow 45</masterLabel>
+            <translation><!-- Elbow 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow 45 Degree</masterLabel>
+            <translation><!-- Elbow 45 Degree --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow 90 deg</masterLabel>
+            <translation><!-- Elbow 90 deg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow RPVC</masterLabel>
+            <translation><!-- Elbow RPVC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow Threaded</masterLabel>
+            <translation><!-- Elbow Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elbow Threaded Push</masterLabel>
+            <translation><!-- Elbow Threaded Push --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End Cap</masterLabel>
+            <translation><!-- End Cap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End Cap CS</masterLabel>
+            <translation><!-- End Cap CS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End Cap Multitrap</masterLabel>
+            <translation><!-- End Cap Multitrap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End Cap Push Type</masterLabel>
+            <translation><!-- End Cap Push Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End Cap Threaded</masterLabel>
+            <translation><!-- End Cap Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Endplug</masterLabel>
+            <translation><!-- Endplug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equal Tee</masterLabel>
+            <translation><!-- Equal Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSG0</masterLabel>
+            <translation><!-- FLSG0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSGO</masterLabel>
+            <translation><!-- FLSGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSK0</masterLabel>
+            <translation><!-- FLSK0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLSKO</masterLabel>
+            <translation><!-- FLSKO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FPVFV</masterLabel>
+            <translation><!-- FPVFV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FPVPI</masterLabel>
+            <translation><!-- FPVPI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTA</masterLabel>
+            <translation><!-- FTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTA THREAD PUSH</masterLabel>
+            <translation><!-- FTA THREAD PUSH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTAPR</masterLabel>
+            <translation><!-- FTAPR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTCCY</masterLabel>
+            <translation><!-- FTCCY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTCRM</masterLabel>
+            <translation><!-- FTCRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTPRT</masterLabel>
+            <translation><!-- FTPRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTVAS</masterLabel>
+            <translation><!-- FTVAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTVBD</masterLabel>
+            <translation><!-- FTVBD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTVGD</masterLabel>
+            <translation><!-- FTVGD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FTVRT</masterLabel>
+            <translation><!-- FTVRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Female Adopter</masterLabel>
+            <translation><!-- Female Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ferrule Saddle</masterLabel>
+            <translation><!-- Ferrule Saddle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flange</masterLabel>
+            <translation><!-- Flange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flange Threaded</masterLabel>
+            <translation><!-- Flange Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GI STD</masterLabel>
+            <translation><!-- GI STD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GI STD 6KGF/SQ</masterLabel>
+            <translation><!-- GI STD 6KGF/SQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRMET</masterLabel>
+            <translation><!-- GRMET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Galli Trap</masterLabel>
+            <translation><!-- Galli Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Hose Pipe - Silver</masterLabel>
+            <translation><!-- Garden Hose Pipe - Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Hose Pipe -Advance Silver</masterLabel>
+            <translation><!-- Garden Hose Pipe -Advance Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Hose Pipe -GOLD</masterLabel>
+            <translation><!-- Garden Hose Pipe -GOLD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Hose Pipe Special</masterLabel>
+            <translation><!-- Garden Hose Pipe Special --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Hose Pipe-PLATINUM(Orange)</masterLabel>
+            <translation><!-- Garden Hose Pipe-PLATINUM(Orange) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden Hose Pipe-Silver</masterLabel>
+            <translation><!-- Garden Hose Pipe-Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Garden HosePipe-PLATINUM</masterLabel>
+            <translation><!-- Garden HosePipe-PLATINUM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HBRC0</masterLabel>
+            <translation><!-- HBRC0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HBRCL</masterLabel>
+            <translation><!-- HBRCL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HCFMS</masterLabel>
+            <translation><!-- HCFMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDCRT</masterLabel>
+            <translation><!-- HDCRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDFL0</masterLabel>
+            <translation><!-- HDFL0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPEY</masterLabel>
+            <translation><!-- HDPEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDRNB</masterLabel>
+            <translation><!-- HDRNB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDTE0</masterLabel>
+            <translation><!-- HDTE0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HEAVY COLUMN PIPE</masterLabel>
+            <translation><!-- HEAVY COLUMN PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HN000</masterLabel>
+            <translation><!-- HN000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HNCBT</masterLabel>
+            <translation><!-- HNCBT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HNCTO</masterLabel>
+            <translation><!-- HNCTO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HNRPC</masterLabel>
+            <translation><!-- HNRPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HNSA0</masterLabel>
+            <translation><!-- HNSA0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HPAIS</masterLabel>
+            <translation><!-- HPAIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HPASO</masterLabel>
+            <translation><!-- HPASO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HPLFE</masterLabel>
+            <translation><!-- HPLFE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HPUAS</masterLabel>
+            <translation><!-- HPUAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HY000</masterLabel>
+            <translation><!-- HY000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Long Bend</masterLabel>
+            <translation><!-- Long Bend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lower Casing</masterLabel>
+            <translation><!-- Lower Casing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MDPE PIPE</masterLabel>
+            <translation><!-- MDPE PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEDIUM COLUMN PIPE</masterLabel>
+            <translation><!-- MEDIUM COLUMN PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>METE0</masterLabel>
+            <translation><!-- METE0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MPEPI</masterLabel>
+            <translation><!-- MPEPI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSBFL</masterLabel>
+            <translation><!-- MSBFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSFL0</masterLabel>
+            <translation><!-- MSFL0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSFLN</masterLabel>
+            <translation><!-- MSFLN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MTA</masterLabel>
+            <translation><!-- MTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MTAPR</masterLabel>
+            <translation><!-- MTAPR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male Adopter</masterLabel>
+            <translation><!-- Male Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male Adopter Hexa Nut</masterLabel>
+            <translation><!-- Male Adopter Hexa Nut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male Threaded Adopter</masterLabel>
+            <translation><!-- Male Threaded Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male Threaded Adopter Brass</masterLabel>
+            <translation><!-- Male Threaded Adopter Brass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metal inserted Female Adaptor</masterLabel>
+            <translation><!-- Metal inserted Female Adaptor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metal inserted Male Adaptor</masterLabel>
+            <translation><!-- Metal inserted Male Adaptor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Misc</masterLabel>
+            <translation><!-- Misc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi Floor Trap</masterLabel>
+            <translation><!-- Multi Floor Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi Floor Trap (bare)</masterLabel>
+            <translation><!-- Multi Floor Trap (bare) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NB CM RISER</masterLabel>
+            <translation><!-- NB CM RISER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NB Cylinder buttom Cap</masterLabel>
+            <translation><!-- NB Cylinder buttom Cap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND U-PVC Bottom Plug</masterLabel>
+            <translation><!-- ND U-PVC Bottom Plug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND U-PVC Top Cap</masterLabel>
+            <translation><!-- ND U-PVC Top Cap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NDCLP</masterLabel>
+            <translation><!-- NDCLP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nahani Trap</masterLabel>
+            <translation><!-- Nahani Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nahani Trap Body</masterLabel>
+            <translation><!-- Nahani Trap Body --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nahani Trap With Jali</masterLabel>
+            <translation><!-- Nahani Trap With Jali --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nahani Trap without Jali</masterLabel>
+            <translation><!-- Nahani Trap without Jali --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nipple</masterLabel>
+            <translation><!-- Nipple --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nipple CM</masterLabel>
+            <translation><!-- Nipple CM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nipple CS</masterLabel>
+            <translation><!-- Nipple CS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OD CASING</masterLabel>
+            <translation><!-- OD CASING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OD PLAIN</masterLabel>
+            <translation><!-- OD PLAIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OD SCREEN</masterLabel>
+            <translation><!-- OD SCREEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPTEE</masterLabel>
+            <translation><!-- OPTEE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORGFV</masterLabel>
+            <translation><!-- ORGFV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P Trap R/R</masterLabel>
+            <translation><!-- P Trap R/R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P Trap S/C</masterLabel>
+            <translation><!-- P Trap S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P Trap With Door</masterLabel>
+            <translation><!-- P Trap With Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P Trap Without Port (F/F)</masterLabel>
+            <translation><!-- P Trap Without Port (F/F) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P0100</masterLabel>
+            <translation><!-- P0100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P0125</masterLabel>
+            <translation><!-- P0125 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P0160</masterLabel>
+            <translation><!-- P0160 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P0200</masterLabel>
+            <translation><!-- P0200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PD000</masterLabel>
+            <translation><!-- PD000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE-100</masterLabel>
+            <translation><!-- PE-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PE025</masterLabel>
+            <translation><!-- PE025 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PENLN</masterLabel>
+            <translation><!-- PENLN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PES11</masterLabel>
+            <translation><!-- PES11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PISAS</masterLabel>
+            <translation><!-- PISAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PISFP</masterLabel>
+            <translation><!-- PISFP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PISPT</masterLabel>
+            <translation><!-- PISPT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PISRA</masterLabel>
+            <translation><!-- PISRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PISRM</masterLabel>
+            <translation><!-- PISRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLB SILICON DUCT</masterLabel>
+            <translation><!-- PLB SILICON DUCT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMPRA</masterLabel>
+            <translation><!-- PMPRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMPRT</masterLabel>
+            <translation><!-- PMPRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN010</masterLabel>
+            <translation><!-- PN010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN10 COPPER</masterLabel>
+            <translation><!-- PN10 COPPER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN16</masterLabel>
+            <translation><!-- PN16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN16 PREFORM</masterLabel>
+            <translation><!-- PN16 PREFORM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN160</masterLabel>
+            <translation><!-- PN160 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN2</masterLabel>
+            <translation><!-- PN2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN20</masterLabel>
+            <translation><!-- PN20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN205</masterLabel>
+            <translation><!-- PN205 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN25</masterLabel>
+            <translation><!-- PN25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN3</masterLabel>
+            <translation><!-- PN3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN5</masterLabel>
+            <translation><!-- PN5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN6 COPPER</masterLabel>
+            <translation><!-- PN6 COPPER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PN8 COPPER</masterLabel>
+            <translation><!-- PN8 COPPER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PTMT Stopper</masterLabel>
+            <translation><!-- PTMT Stopper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PUHDA</masterLabel>
+            <translation><!-- PUHDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass Over</masterLabel>
+            <translation><!-- Pass Over --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass Overs ( S/C type)</masterLabel>
+            <translation><!-- Pass Overs ( S/C type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perfora</masterLabel>
+            <translation><!-- Perfora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pipe Clip</masterLabel>
+            <translation><!-- Pipe Clip --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plain Nahani Pipe</masterLabel>
+            <translation><!-- Plain Nahani Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plain Nahani Trap Jali</masterLabel>
+            <translation><!-- Plain Nahani Trap Jali --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plastic Jali for Trap</masterLabel>
+            <translation><!-- Plastic Jali for Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plate for Multitrap</masterLabel>
+            <translation><!-- Plate for Multitrap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Push Type Reducing Elbow</masterLabel>
+            <translation><!-- Push Type Reducing Elbow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Push fit coupler</masterLabel>
+            <translation><!-- Push fit coupler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q Trap R/R</masterLabel>
+            <translation><!-- Q Trap R/R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Q Trap S/C</masterLabel>
+            <translation><!-- Q Trap S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R0000</masterLabel>
+            <translation><!-- R0000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RCN3C</masterLabel>
+            <translation><!-- RCN3C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RDS</masterLabel>
+            <translation><!-- RDS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RED00</masterLabel>
+            <translation><!-- RED00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REDU0</masterLabel>
+            <translation><!-- REDU0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIMAS</masterLabel>
+            <translation><!-- RIMAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIMPC</masterLabel>
+            <translation><!-- RIMPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIPAD</masterLabel>
+            <translation><!-- RIPAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIPNB</masterLabel>
+            <translation><!-- RIPNB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RMC0M</masterLabel>
+            <translation><!-- RMC0M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RMCTM</masterLabel>
+            <translation><!-- RMCTM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RMOR0</masterLabel>
+            <translation><!-- RMOR0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RMPTC</masterLabel>
+            <translation><!-- RMPTC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RMTAS</masterLabel>
+            <translation><!-- RMTAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RMTOR</masterLabel>
+            <translation><!-- RMTOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROR3C</masterLabel>
+            <translation><!-- ROR3C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RP0EX</masterLabel>
+            <translation><!-- RP0EX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RPASB</masterLabel>
+            <translation><!-- RPASB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RPASE</masterLabel>
+            <translation><!-- RPASE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RPVC Tee</masterLabel>
+            <translation><!-- RPVC Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RROD0</masterLabel>
+            <translation><!-- RROD0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS010</masterLabel>
+            <translation><!-- RS010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS100</masterLabel>
+            <translation><!-- RS100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS125</masterLabel>
+            <translation><!-- RS125 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RS160</masterLabel>
+            <translation><!-- RS160 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSART</masterLabel>
+            <translation><!-- RSART --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSAST</masterLabel>
+            <translation><!-- RSAST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSCT0</masterLabel>
+            <translation><!-- RSCT0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSK40</masterLabel>
+            <translation><!-- RSK40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSK60</masterLabel>
+            <translation><!-- RSK60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RSK80</masterLabel>
+            <translation><!-- RSK80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT010</masterLabel>
+            <translation><!-- RT010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT100</masterLabel>
+            <translation><!-- RT100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT125</masterLabel>
+            <translation><!-- RT125 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT160</masterLabel>
+            <translation><!-- RT160 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT225</masterLabel>
+            <translation><!-- RT225 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT400</masterLabel>
+            <translation><!-- RT400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT450</masterLabel>
+            <translation><!-- RT450 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE25</masterLabel>
+            <translation><!-- RTE25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE32</masterLabel>
+            <translation><!-- RTE32 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE40</masterLabel>
+            <translation><!-- RTE40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE60</masterLabel>
+            <translation><!-- RTE60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTE80</masterLabel>
+            <translation><!-- RTE80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RTW00</masterLabel>
+            <translation><!-- RTW00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RUBRT</masterLabel>
+            <translation><!-- RUBRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RUBST</masterLabel>
+            <translation><!-- RUBST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RUGA0</masterLabel>
+            <translation><!-- RUGA0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RY00D</masterLabel>
+            <translation><!-- RY00D --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducer</masterLabel>
+            <translation><!-- Reducer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducer (R/R Type)</masterLabel>
+            <translation><!-- Reducer (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducer (S/C Type)</masterLabel>
+            <translation><!-- Reducer (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducer Eccentric Type</masterLabel>
+            <translation><!-- Reducer Eccentric Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing &apos;Y&apos; 6Kg</masterLabel>
+            <translation><!-- Reducing &apos;Y&apos; 6Kg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Bush</masterLabel>
+            <translation><!-- Reducing Bush --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Bush IPS CTS</masterLabel>
+            <translation><!-- Reducing Bush IPS CTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Bush LN</masterLabel>
+            <translation><!-- Reducing Bush LN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Bush Threaded</masterLabel>
+            <translation><!-- Reducing Bush Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Door Tee (R/R Type)</masterLabel>
+            <translation><!-- Reducing Door Tee (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Elbow</masterLabel>
+            <translation><!-- Reducing Elbow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Elbow (Thread/Push)</masterLabel>
+            <translation><!-- Reducing Elbow (Thread/Push) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Elbow Plain</masterLabel>
+            <translation><!-- Reducing Elbow Plain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Elbow Threaded</masterLabel>
+            <translation><!-- Reducing Elbow Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing P Trap</masterLabel>
+            <translation><!-- Reducing P Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Socket</masterLabel>
+            <translation><!-- Reducing Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Socket FTA</masterLabel>
+            <translation><!-- Reducing Socket FTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Socket Push Type</masterLabel>
+            <translation><!-- Reducing Socket Push Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Socket Threaded</masterLabel>
+            <translation><!-- Reducing Socket Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Tee</masterLabel>
+            <translation><!-- Reducing Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Tee (Thread/Push)</masterLabel>
+            <translation><!-- Reducing Tee (Thread/Push) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Tee Threaded</masterLabel>
+            <translation><!-- Reducing Tee Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reducing Y</masterLabel>
+            <translation><!-- Reducing Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ribbed Screen</masterLabel>
+            <translation><!-- Ribbed Screen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ribbed Screen Pipe M/F</masterLabel>
+            <translation><!-- Ribbed Screen Pipe M/F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ribbed Screen Pipe M/T</masterLabel>
+            <translation><!-- Ribbed Screen Pipe M/T --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ring Seal Adapter (R/R Type)</masterLabel>
+            <translation><!-- Ring Seal Adapter (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ring Seal Adapter (S/C Type)</masterLabel>
+            <translation><!-- Ring Seal Adapter (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Robo Screen</masterLabel>
+            <translation><!-- Robo Screen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rubber Lubricant</masterLabel>
+            <translation><!-- Rubber Lubricant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rubber Ring</masterLabel>
+            <translation><!-- Rubber Ring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rubber Ring For Traps</masterLabel>
+            <translation><!-- Rubber Ring For Traps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S/S SLIDING SOCKET</masterLabel>
+            <translation><!-- S/S SLIDING SOCKET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S/S SWR</masterLabel>
+            <translation><!-- S/S SWR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S/S TYPE A</masterLabel>
+            <translation><!-- S/S TYPE A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S/S TYPE B</masterLabel>
+            <translation><!-- S/S TYPE B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S/S TYPE O</masterLabel>
+            <translation><!-- S/S TYPE O --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH 120</masterLabel>
+            <translation><!-- SCH 120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH 33</masterLabel>
+            <translation><!-- SCH 33 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH 40</masterLabel>
+            <translation><!-- SCH 40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH 80</masterLabel>
+            <translation><!-- SCH 80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH 80 LEAD &amp; TIN FREE</masterLabel>
+            <translation><!-- SCH 80 LEAD &amp; TIN FREE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH 80 PLAIN END</masterLabel>
+            <translation><!-- SCH 80 PLAIN END --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH40</masterLabel>
+            <translation><!-- SCH40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCH40 BELL END</masterLabel>
+            <translation><!-- SCH40 BELL END --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCRCL</masterLabel>
+            <translation><!-- SCRCL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 11</masterLabel>
+            <translation><!-- SDR 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 11 COPPER</masterLabel>
+            <translation><!-- SDR 11 COPPER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 11 ISO</masterLabel>
+            <translation><!-- SDR 11 ISO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 13.6</masterLabel>
+            <translation><!-- SDR 13.6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 17.6</masterLabel>
+            <translation><!-- SDR 17.6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 9</masterLabel>
+            <translation><!-- SDR 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR11</masterLabel>
+            <translation><!-- SDR11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR13.5</masterLabel>
+            <translation><!-- SDR13.5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SK000</masterLabel>
+            <translation><!-- SK000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLCO0</masterLabel>
+            <translation><!-- SLCO0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLIDING SOCKET D/S</masterLabel>
+            <translation><!-- SLIDING SOCKET D/S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SNDTA</masterLabel>
+            <translation><!-- SNDTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SNDTP</masterLabel>
+            <translation><!-- SNDTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION</masterLabel>
+            <translation><!-- SOLUTION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION HEAVY DUTY</masterLabel>
+            <translation><!-- SOLUTION HEAVY DUTY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION HEAVY TUBE BODY</masterLabel>
+            <translation><!-- SOLUTION HEAVY TUBE BODY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION MEDIUM CONTAINER</masterLabel>
+            <translation><!-- SOLUTION MEDIUM CONTAINER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION MEDIUM PACK</masterLabel>
+            <translation><!-- SOLUTION MEDIUM PACK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION MEDIUM PLASTIC</masterLabel>
+            <translation><!-- SOLUTION MEDIUM PLASTIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION MEDIUM TUBE BODY</masterLabel>
+            <translation><!-- SOLUTION MEDIUM TUBE BODY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOLUTION TUBE</masterLabel>
+            <translation><!-- SOLUTION TUBE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPCLR</masterLabel>
+            <translation><!-- SPCLR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPN06</masterLabel>
+            <translation><!-- SPN06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPN10</masterLabel>
+            <translation><!-- SPN10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRFM</masterLabel>
+            <translation><!-- SPRFM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRIN</masterLabel>
+            <translation><!-- SPRIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRLH</masterLabel>
+            <translation><!-- SPRLH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPRSM</masterLabel>
+            <translation><!-- SPRSM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSCNM</masterLabel>
+            <translation><!-- SSCNM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSG00</masterLabel>
+            <translation><!-- SSG00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSHNP</masterLabel>
+            <translation><!-- SSHNP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSWHP</masterLabel>
+            <translation><!-- SSWHP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STANDARD COLUMN PIPE</masterLabel>
+            <translation><!-- STANDARD COLUMN PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STAS0</masterLabel>
+            <translation><!-- STAS0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STDRT</masterLabel>
+            <translation><!-- STDRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STDST</masterLabel>
+            <translation><!-- STDST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWFL0</masterLabel>
+            <translation><!-- SWFL0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWR TYPE A</masterLabel>
+            <translation><!-- SWR TYPE A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWR TYPE A SELFIT</masterLabel>
+            <translation><!-- SWR TYPE A SELFIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWR TYPE B</masterLabel>
+            <translation><!-- SWR TYPE B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWR TYPE B SELFIT</masterLabel>
+            <translation><!-- SWR TYPE B SELFIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYDRT</masterLabel>
+            <translation><!-- SYDRT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SYDST</masterLabel>
+            <translation><!-- SYDST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saddle</masterLabel>
+            <translation><!-- Saddle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sand Trap Pipe</masterLabel>
+            <translation><!-- Sand Trap Pipe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sch40 Adapter</masterLabel>
+            <translation><!-- Sch40 Adapter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Bend (S/C Type)</masterLabel>
+            <translation><!-- Short Bend (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Bend R/R</masterLabel>
+            <translation><!-- Short Bend R/R --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short bend</masterLabel>
+            <translation><!-- Short bend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Socket Trap</masterLabel>
+            <translation><!-- Single Socket Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single T R/R Type</masterLabel>
+            <translation><!-- Single T R/R Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single T S/C Type</masterLabel>
+            <translation><!-- Single T S/C Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single T with Door (R/R Type)</masterLabel>
+            <translation><!-- Single T with Door (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single T with Door (S/C Type)</masterLabel>
+            <translation><!-- Single T with Door (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single T with Left Door (S/C Type)</masterLabel>
+            <translation><!-- Single T with Left Door (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Tee</masterLabel>
+            <translation><!-- Single Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Tee with Door</masterLabel>
+            <translation><!-- Single Tee with Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Y (R/R Type)</masterLabel>
+            <translation><!-- Single Y (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Y (S/C Type)</masterLabel>
+            <translation><!-- Single Y (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Y with Door (R/R Type)</masterLabel>
+            <translation><!-- Single Y with Door (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Y with Door (S/C Type)</masterLabel>
+            <translation><!-- Single Y with Door (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sliding Socketed</masterLabel>
+            <translation><!-- Sliding Socketed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slip Coupler (R/R Type)</masterLabel>
+            <translation><!-- Slip Coupler (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Slip Coupler S/C</masterLabel>
+            <translation><!-- Slip Coupler S/C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Socket</masterLabel>
+            <translation><!-- Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Socket Plug (R/R Type)</masterLabel>
+            <translation><!-- Socket Plug (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Socket Plug (S/C Type)</masterLabel>
+            <translation><!-- Socket Plug (S/C Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Socket Plug SCT</masterLabel>
+            <translation><!-- Socket Plug SCT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Socket Threaded</masterLabel>
+            <translation><!-- Socket Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solvent Cement CPVC</masterLabel>
+            <translation><!-- Solvent Cement CPVC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Steel Clamp</masterLabel>
+            <translation><!-- Steel Clamp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Step Over</masterLabel>
+            <translation><!-- Step Over --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stop Cock</masterLabel>
+            <translation><!-- Stop Cock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stopper Plug</masterLabel>
+            <translation><!-- Stopper Plug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swept Tee (R/R Type)</masterLabel>
+            <translation><!-- Swept Tee (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swept Tee with Door (R/R Type)</masterLabel>
+            <translation><!-- Swept Tee with Door (R/R Type) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE100</masterLabel>
+            <translation><!-- TE100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TNCNP</masterLabel>
+            <translation><!-- TNCNP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPCNT</masterLabel>
+            <translation><!-- TPCNT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPGBU</masterLabel>
+            <translation><!-- TPGBU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TPSFL</masterLabel>
+            <translation><!-- TPSFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TUGA0</masterLabel>
+            <translation><!-- TUGA0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tail Piece</masterLabel>
+            <translation><!-- Tail Piece --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tail Piece (Male)</masterLabel>
+            <translation><!-- Tail Piece (Male) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tail Piece Flange</masterLabel>
+            <translation><!-- Tail Piece Flange --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tank Connecting Nipple</masterLabel>
+            <translation><!-- Tank Connecting Nipple --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tank Connecting Nipple Female</masterLabel>
+            <translation><!-- Tank Connecting Nipple Female --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tee</masterLabel>
+            <translation><!-- Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tee Threaded</masterLabel>
+            <translation><!-- Tee Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tee Threaded Push</masterLabel>
+            <translation><!-- Tee Threaded Push --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Threaded Endplug/Cone</masterLabel>
+            <translation><!-- Threaded Endplug/Cone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Threaded Socket</masterLabel>
+            <translation><!-- Threaded Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transition Bush</masterLabel>
+            <translation><!-- Transition Bush --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UC3BH</masterLabel>
+            <translation><!-- UC3BH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UC3NB</masterLabel>
+            <translation><!-- UC3NB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UCCTS</masterLabel>
+            <translation><!-- UCCTS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UEQTE</masterLabel>
+            <translation><!-- UEQTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPVC &apos;Y&apos;</masterLabel>
+            <translation><!-- UPVC &apos;Y&apos; --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPVC NB THREADED PIPE</masterLabel>
+            <translation><!-- UPVC NB THREADED PIPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPVC SCREEN PIPE 5MM</masterLabel>
+            <translation><!-- UPVC SCREEN PIPE 5MM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>URPAD</masterLabel>
+            <translation><!-- URPAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT000</masterLabel>
+            <translation><!-- UT000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT100</masterLabel>
+            <translation><!-- UT100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT125</masterLabel>
+            <translation><!-- UT125 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unequal Tee</masterLabel>
+            <translation><!-- Unequal Tee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unequal Y ( Type-B)</masterLabel>
+            <translation><!-- Unequal Y ( Type-B) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Union</masterLabel>
+            <translation><!-- Union --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Union Threaded</masterLabel>
+            <translation><!-- Union Threaded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Union Valve</masterLabel>
+            <translation><!-- Union Valve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upper Casing</masterLabel>
+            <translation><!-- Upper Casing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vent Cowl</masterLabel>
+            <translation><!-- Vent Cowl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vent Pipe Plain End</masterLabel>
+            <translation><!-- Vent Pipe Plain End --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WST00</masterLabel>
+            <translation><!-- WST00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WSTDL</masterLabel>
+            <translation><!-- WSTDL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WSTFL</masterLabel>
+            <translation><!-- WSTFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WT5LY</masterLabel>
+            <translation><!-- WT5LY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WTECO</masterLabel>
+            <translation><!-- WTECO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WTEWF</masterLabel>
+            <translation><!-- WTEWF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y</masterLabel>
+            <translation><!-- Y --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Y Junction</masterLabel>
+            <translation><!-- Y Junction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZTPTC</masterLabel>
+            <translation><!-- ZTPTC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inactive Product --></label>
+        <name>Inactive_Product__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for entering Inventory Posting Group. --></help>
+        <label><!-- Inventory Posting Group --></label>
+        <name>Inventory_Posting_Group__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for entering Item Discount Group --></help>
+        <label><!-- Item Disc. Group --></label>
+        <name>Item_Disc_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length (Meter) --></label>
+        <name>Length_In_Meter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length --></label>
+        <name>Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nature --></label>
+        <name>Nature__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Pcs in one box --></label>
+        <name>No_of_Pcs_in_one_box__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ori-Plast Product Unique Key --></label>
+        <name>OriPlast_Product_Unique_Key__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for choosing Product Category Code. --></help>
+        <label><!-- Product Category Code --></label>
+        <name>Product_Category_Code_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>Fabricated</masterLabel>
+            <translation><!-- Fabricated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HDPE</masterLabel>
+            <translation><!-- HDPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MDPE</masterLabel>
+            <translation><!-- MDPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moulding</masterLabel>
+            <translation><!-- Moulding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PVC</masterLabel>
+            <translation><!-- PVC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Category Code --></label>
+        <name>Product_Category_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used to Scan the product. --></help>
+        <label><!-- QR Code --></label>
+        <name>QR_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- it is used to enter the size of the Product --></help>
+        <label><!-- Size --></label>
+        <name>Size__c</name>
+    </fields>
+    <fields>
+        <help><!-- It is used for choosing Sub Category of a product. --></help>
+        <label><!-- Sub Category --></label>
+        <name>Sub_Category_Picklist__c</name>
+        <picklistValues>
+            <masterLabel>ASTM</masterLabel>
+            <translation><!-- ASTM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assembly</masterLabel>
+            <translation><!-- Assembly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bell End</masterLabel>
+            <translation><!-- Bell End --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLASS1 (SDR11)</masterLabel>
+            <translation><!-- CLASS1 (SDR11) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLASS2 (SDR 13.5)</masterLabel>
+            <translation><!-- CLASS2 (SDR 13.5) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPVC</masterLabel>
+            <translation><!-- CPVC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cam Lock</masterLabel>
+            <translation><!-- Cam Lock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cuppler</masterLabel>
+            <translation><!-- Cuppler --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cylinder</masterLabel>
+            <translation><!-- Cylinder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Double Socket</masterLabel>
+            <translation><!-- Double Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flush Joint</masterLabel>
+            <translation><!-- Flush Joint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Galvanized Nut Bolt</masterLabel>
+            <translation><!-- Galvanized Nut Bolt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IS 14333 Fittings</masterLabel>
+            <translation><!-- IS 14333 Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISO 4427 Fittings</masterLabel>
+            <translation><!-- ISO 4427 Fittings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LED &amp; TIN FREE</masterLabel>
+            <translation><!-- LED &amp; TIN FREE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male / Female Thread</masterLabel>
+            <translation><!-- Male / Female Thread --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Male Thread</masterLabel>
+            <translation><!-- Male Thread --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nitrile Rubber</masterLabel>
+            <translation><!-- Nitrile Rubber --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pipe Grade PE 100</masterLabel>
+            <translation><!-- Pipe Grade PE 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pipe Grade PE 63</masterLabel>
+            <translation><!-- Pipe Grade PE 63 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pipe Grade PE 80</masterLabel>
+            <translation><!-- Pipe Grade PE 80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plain End</masterLabel>
+            <translation><!-- Plain End --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Push Type</masterLabel>
+            <translation><!-- Push Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rod</masterLabel>
+            <translation><!-- Rod --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 11</masterLabel>
+            <translation><!-- SDR 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 13.6</masterLabel>
+            <translation><!-- SDR 13.6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 17</masterLabel>
+            <translation><!-- SDR 17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 21</masterLabel>
+            <translation><!-- SDR 21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 26</masterLabel>
+            <translation><!-- SDR 26 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 33</masterLabel>
+            <translation><!-- SDR 33 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 41</masterLabel>
+            <translation><!-- SDR 41 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 6</masterLabel>
+            <translation><!-- SDR 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 7.4</masterLabel>
+            <translation><!-- SDR 7.4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDR 9</masterLabel>
+            <translation><!-- SDR 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWR</masterLabel>
+            <translation><!-- SWR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sand Trap</masterLabel>
+            <translation><!-- Sand Trap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single Socket</masterLabel>
+            <translation><!-- Single Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sliding Socket</masterLabel>
+            <translation><!-- Sliding Socket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solvent Cement</masterLabel>
+            <translation><!-- Solvent Cement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stainless Steel nut bolt</masterLabel>
+            <translation><!-- Stainless Steel nut bolt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPVC</masterLabel>
+            <translation><!-- UPVC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valve</masterLabel>
+            <translation><!-- Valve --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub Category (Text) --></label>
+        <name>Sub_Category__c</name>
+    </fields>
+    <layouts>
+        <layout>Oriplast Product Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

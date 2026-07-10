@@ -1,0 +1,356 @@
+/* Main card styling */
+.modern-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f3f3f3;
+}
+
+.section-container {
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    margin: 1rem;
+    border: 1px solid #f3f3f3;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f0f8ff;
+}
+
+/* Action selector styling */
+.action-selector {
+    background: linear-gradient(135deg, #f8faff 0%, #f0f8ff 100%);
+    border-left: 4px solid #0070d2;
+}
+
+.radio-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+}
+
+.custom-radio-group {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Table styling */
+.table-container {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    margin-top: 1rem;
+}
+
+.custom-table,
+.edit-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-header-row {
+    background: linear-gradient(135deg, #f8faff 0%, #e8f2ff 100%);
+    border-bottom: 2px solid #d8e6ff;
+}
+
+.table-header-row th {
+    font-weight: 600;
+    color: #1c355e;
+    padding: 1rem;
+    border-right: 1px solid #e5e5e5;
+}
+
+.table-header-row th:last-child {
+    border-right: none;
+}
+
+.table-row,
+.edit-row {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:hover {
+    background-color: #f9fbfe;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 112, 210, 0.08);
+}
+
+.edit-row {
+    background-color: #f9fdfe;
+}
+
+.table-row td,
+.edit-row td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-right: 1px solid #f0f0f0;
+}
+
+.table-row td:last-child,
+.edit-row td:last-child {
+    border-right: none;
+}
+
+/* Cell specific styling */
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-checkbox .slds-checkbox_faux {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #d8e6ff;
+}
+
+.product-cell {
+    min-width: 200px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-weight: 500;
+    color: #2c2c2c;
+}
+
+.quantity-cell,
+.line-number-cell {
+    text-align: center;
+}
+
+.quantity-badge,
+.line-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, #e8f2ff 0%, #d8e6ff 100%);
+    color: #0070d2;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid #c8e0ff;
+}
+
+.price-cell {
+    text-align: right;
+}
+
+.price-display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+
+.currency-symbol {
+    color: #666;
+    font-weight: 500;
+}
+
+.price-value {
+    font-weight: 600;
+    color: #1c355e;
+    font-size: 1.1em;
+}
+
+/* Edit mode specific */
+.quantity-edit-cell {
+    min-width: 120px;
+}
+
+.quantity-input {
+    --sds-c-input-radius-border: 6px;
+    --sds-c-input-color-border: #d8e6ff;
+    --sds-c-input-color-border-focus: #0070d2;
+}
+
+.quantity-input input {
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Selected count and hints */
+.selected-count {
+    background: linear-gradient(135deg, #0070d2 0%, #005fb2 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.edit-hint {
+    color: #666;
+    background: #f8f8f8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    border-left: 3px solid #5eb4ff;
+}
+
+/* Button styling */
+.button-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 2px solid #f0f8ff;
+}
+
+.next-button,
+.save-button {
+    --sds-c-button-brand-color-background: linear-gradient(135deg, #0070d2 0%, #005fb2 100%);
+    --sds-c-button-brand-color-border: #0070d2;
+    --sds-c-button-radius-border: 8px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-width: 120px;
+}
+
+.next-button[disabled] {
+    opacity: 0.6;
+}
+
+/* Modal styling */
+.modern-modal {
+    z-index: 9002;
+}
+
+.modal-container {
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    border: none;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffe6e6 100%);
+    border-bottom: 2px solid #ffcccc;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+}
+
+.slds-icon-text-error {
+    fill: #ea001e;
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.confirmation-text {
+    font-size: 1.125rem;
+    color: #2c2c2c;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.confirmation-hint {
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+.modal-footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.cancel-button {
+    --sds-c-button-neutral-color-border: #e5e5e5;
+    --sds-c-button-radius-border: 8px;
+    min-width: 100px;
+}
+
+.delete-button {
+    --sds-c-button-destructive-color-background: linear-gradient(135deg, #ea001e 0%, #ba0517 100%);
+    --sds-c-button-destructive-color-border: #ea001e;
+    --sds-c-button-radius-border: 8px;
+    min-width: 100px;
+}
+
+/* Hover effects */
+.next-button:hover,
+.save-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 112, 210, 0.2);
+}
+
+.cancel-button:hover {
+    background-color: #f8f8f8;
+}
+
+.delete-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(234, 0, 30, 0.2);
+}
+
+/* Backdrop */
+.slds-backdrop_open {
+    opacity: 0.8;
+    background: #2c2c2c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-container {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .custom-table,
+    .edit-table {
+        min-width: 600px;
+    }
+
+    .button-footer {
+        justify-content: center;
+    }
+
+    .modal-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* Force modal to full screen */
+    .full-screen-container {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* Remove padding & allow child to control layout */
+    .full-screen-body {
+        height: calc(100vh - 64px);
+        /* header height */
+        overflow: auto;
+    }
+
+    /* FORCE ALL MODALS TO FULL SCREEN */
+    .slds-modal__container {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+
+}

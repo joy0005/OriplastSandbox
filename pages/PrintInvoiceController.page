@@ -1,0 +1,746 @@
+<!--@company-- DataColada
+@Date-- 25/03/2024
+@Author-- Amartya Goswami
+@Description--This Vf page used to genetare pdf for Oriplast Order
+@Last Modified By-- Reetabrata Mishra
+@Last Modified Date--28/03/2024 -->
+
+<apex:page controller="PrintInvoicePageController" renderAs="pdf" action="{!processInvoice}">
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <title>e6f0b3ec-17e1-4427-9776-4ec87efbec7a</title>
+            <style type="text/css"> * {margin:0; padding:0; text-indent:0; }
+                
+                table, tbody {vertical-align: top; }
+                .s1 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt; }
+                .s2 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt; }
+                .s3 { color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt; }
+                .th{ color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;vertical-align: middle;text-align:center; Padding:2px}
+                .td{ color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px}
+                .tb{ color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px}
+                .center {
+                margin-left: auto;
+                margin-right: auto;}
+                
+             .watermark {
+                position: fixed;
+                z-index: -1;
+                top: 50%;                   /* vertically middle */
+                right: 5%;                  /* push it to right side */
+                transform: rotate(-45deg);  /* diagonal */
+                color: #D3D3D3;             /* light grey */
+                opacity: 0.2;               /* semi-transparent */
+                font-size: 80pt;            /* a bit smaller than center */
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                white-space: nowrap;
+            }
+
+
+
+
+                
+            </style>
+        </head>
+        <body>
+            
+            
+              
+    		
+
+            <apex:outputPanel layout="none" rendered="{!orders.Order_Status__c == 'Draft'}">
+            <div style="width:700px ;background: url('{!$Resource.draft}') no-repeat center center; height:800px; font-family: Arial, Helvetica, sans-serif;">
+                <table style="cell-padding:0;cell-spacing:0;border:0">
+                    <tr>
+                        <td>
+                            <apex:image style="float: left;" url="{!$Resource.OriPlast_Logo}" />
+                        </td>
+                        <td style="text-align:center">
+                            <h1 style="padding-left:120px;color: #AF961B ; font-size: 30px;" >Proforma Invoice</h1>  
+                        </td>
+                    </tr>   
+                </table>
+                
+                <table class="center" style="width:700px"  border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table style="border-collapse:collapse;margin-left:3pt" cellspacing="0">
+                                <tr style="vertical-align:top">
+                                    <td style="width:34%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1pt" colspan="6">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt;padding-top: 1pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">ORIPLAST LIMITED</p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 4pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                                            Address :-  <apex:outputText value="{!proformaInvoiceAddress}" rendered="{!NOT(ISBLANK(proformaInvoiceAddress))}"/>
+                                        </p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 4pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">State Code <span class="s3">: - CT ; </span>City <span class="s3">:- Mahasamund-493445</span></p>
+                                        <p style="padding-top: 8pt;text-indent: 0pt;text-align: left;"></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;font-weight:bold;padding-left: 1pt;text-indent: 0pt;text-align: left;">Order No :- <span class="s3"><apex:outputText value="{!IF(NOT(ISBLANK(orders.Name)), orders.Name, '')}" /></span></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 4pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Order Date :- <span class="s3"><apex:outputText value="{!IF(NOT(ISBLANK(orderDate)), orderDate, '')}" /></span></p>
+                                        
+                                    </td>
+                                    <td  style="width:66%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1px" colspan="13">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Customer Name &amp; Address:</p>
+                                        <!--<p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(NOT(ISBLANK(acc.Name)), acc.Name, '')}"/></p>
+<p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-top: 9pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingStreet)), acc.BillingStreet, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingCity)), acc.BillingCity, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingPostalCode)), acc.BillingPostalCode, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingState)), acc.BillingState, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingCountry)), acc.BillingCountry, '')}"/> -->
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(ISBLANK(acc.Name), '', acc.Name)}"/></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-top: 9pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(ISBLANK(acc.BillingStreet), '', acc.BillingStreet)}"/><br/>   
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingCity), '', acc.BillingCity)}"/><br/>
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingPostalCode), '', acc.BillingPostalCode)}"/><br/>
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingState), '', acc.BillingState)}"/><br/>
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingCountry), '', acc.BillingCountry)}"/><br/>
+                                        </p>
+                                        <p style="text-indent: 0pt;text-align: left;"></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Customer GSTIN No:-                         <span  height="100%" style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;vertical-align: bottom;"><apex:outputText value="{!IF(NOT(ISBLANK(acc.GST_Registration_No__c)), acc.GST_Registration_No__c, '')}" /></span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height:17px">
+                                    <td  style="width:19%;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1pt;border-right-color: #C2C1C1;" colspan="3">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 1pt;text-indent: 0pt;text-align: center;">OriPlast GST No.</p>
+                                    </td>
+                                    <td width="19%" style="border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1px;" colspan="3">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 1pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">22AAACO3368A1Z1</p>
+                                    </td>
+                                    <td width="62%" style="border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1pt" colspan="13">
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                
+                                <tr style="height:25px">
+                                    <td  style="width:1%;border-top-style:solid;border-top-width:1px;border-left-style:solid;border-left-width:1px;border-bottom-style:solid;border-bottom-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        S.No
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1px;border-bottom-style:solid;border-bottom-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Item Description
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        HSN/SAC<br/>
+                                        Code
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Unit of Measure
+                                    </td>
+                                    
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        ERP Quantity
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Unit Price
+                                    </td>
+                                    <td style="width:2%;border-top-style:solid;border-top-width:1px;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td style="width:3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        IGST
+                                    </td>
+                                    <td   style="width:3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        CGST
+                                    </td>
+                                    <td  style="width:3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        SGST
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Trade<br/>
+                                        Discount
+                                    </td>
+                                    <td style="width:2%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Cash<br/>
+                                        Discount
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Price<br/>
+                                        After<br/>
+                                        Discount
+                                    </td>
+                                </tr>
+                                
+                                <tr style="height:18px">
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="7">
+                                        <br/>
+                                    </td>
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td  style="width=8%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td  style="width=8%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td  style="width=8%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <!--<td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;vertical-align: middle;text-align:center; Padding:2px">
+Rate
+</td>-->
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Amount
+                                    </td>
+                                </tr>
+                                
+                                <apex:variable var="counter" value="{!0}" />
+                                <apex:repeat value="{!lineItems}" var="orderLineItem" >
+                                    <apex:outputPanel layout="none" rendered="{!counter == 0}">
+                                        <tr>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;border-left-style:solid;border-left-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!counter+1}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product_Name__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product__r.HSN_SAC_Code__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Unit_of_Measure__c}
+                                            </td>
+                                            <td  style="width=4%;border-top-style:solid;border-top-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.ERP_Quantity__c}
+                                            </td>
+                                            <td style="width=4%;border-top-style:solid;border-top-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.OriPlast_Product_Unit_Price__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.Total_Price__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0
+                                            </td>
+                                            <td  style="width=5%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0.00
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.CGST_Percentage__c}
+                                            </td>
+                                            <td  style="width=4%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.CGST__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.SGST_Percentage__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.SGST__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Trade_Discount__c}
+                                            </td>
+                                            <td style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.Trade_Discount_TD__c, 2)}
+                                            </td>
+                                            <td style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!IF(ISNULL(orderLineItem.Cash_Discount_Percentage__c), 0, orderLineItem.Cash_Discount_Percentage__c)}
+                                               
+                                            </td>
+                                            <td style="width=4%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                               {!ROUND(orderLineItem.Cash_Discount_CD__c, 2)}
+                                            </td>
+                                            <!--<td style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:1px">
+
+</td>-->
+                                            <td style="width=2%;border-top-style:solid;border-top-width:1px;border-right-style:solid;border-right-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                                {!ROUND(orderLineItem.Price_After_Discount__c, 2)}
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!counter != 0}">
+                                        <tr style="height:30px">
+                                            <td  style="width=2%;border-left-style:solid;border-left-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!counter+1}
+                                            </td>
+                                            <td  style="width=12%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product_Name__c}
+                                            </td>
+                                            <td style="width=6%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product__r.HSN_SAC_Code__c}
+                                            </td>
+                                            <td style="width=6%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Unit_of_Measure__c}
+                                            </td>
+                                            <td  style="width=4%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.ERP_Quantity__c}
+                                            </td>
+                                            <td  style="width=4%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.OriPlast_Product_Unit_Price__c}
+                                            </td>
+                                            <td  style="width=7%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Total_Price__c}
+                                            </td>
+                                            <td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0
+                                            </td>
+                                            <td  style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0.00
+                                            </td>
+                                            <td  style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.CGST_Percentage__c}
+                                            </td>
+                                            <td  style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                               {!ROUND(orderLineItem.CGST__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.SGST_Percentage__c}
+                                            </td>
+                                            <td style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.SGST__c, 2)}
+                                            </td>
+                                            <td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Trade_Discount__c}
+                                            </td>
+                                            <td style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.Trade_Discount_TD__c, 2)}
+                                            </td>
+                                            <td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                 {!IF(ISNULL(orderLineItem.Cash_Discount_Percentage__c), 0, orderLineItem.Cash_Discount_Percentage__c)}
+                                            </td>
+                                            <td style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                              {!ROUND(orderLineItem.Cash_Discount_CD__c, 2)}
+                                            </td>
+                                            <!--<td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+
+</td>-->
+                                            <td  style="width=11%;border-right-style:solid;border-right-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                                {!ROUND(orderLineItem.Price_After_Discount__c, 2)}
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <apex:variable var="counter" value="{!counter + 1}" />
+                                </apex:repeat>
+                                <tr>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;text-align:right;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px" colspan="6">
+                                        Total Line Amount :
+                                    </td>
+                                    
+                                    
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        {!ROUND(totalProductPrice, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        0.00
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                       {!ROUND(orders.Total_CGST__c, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        {!ROUND(orders.Total_SGST__c, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                      {!ROUND(orders.Total_Trade_Discount__c, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                         {!ROUND(orders.Total_Cash_Discount__c, 2)}
+                                    </td>
+                                    <!--<td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+<br/>
+</td>-->
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px" colspan="2">
+                                         {!ROUND(orders.Total_Price_After_Discount__c, 2)}
+                                    </td>
+                                </tr>
+                                
+                                <tr style="height:30px">
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;padding:5px;text-align:left;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;Padding:2px" colspan="7">
+                                        {!finalOrderValueInWords}
+                                    </td>
+                                    <td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px" colspan="12">
+                                        Grand Total : {!ROUND(orders.Final_Order_Value__c, 2)}
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                    </tr>    
+                </table>
+            </div>
+            
+    
+</apex:outputPanel>
+            <apex:outputPanel layout="none" rendered="{!orders.Order_Status__c != 'Draft'}">
+            <div style="width:700px ">
+                <table style="cell-padding:0;cell-spacing:0;border:0">
+                    <tr>
+                        <td>
+                            <apex:image style="float: left;" url="{!$Resource.OriPlast_Logo}" />
+                        </td>
+                        <td style="text-align:center">
+                            <h1 style="padding-left:120px;color: #AF961B ; font-size: 30px;" >Proforma Invoice</h1>  
+                        </td>
+                    </tr>   
+                </table>
+                
+                <table class="center" style="width:700px"  border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table style="border-collapse:collapse;margin-left:3pt" cellspacing="0">
+                                <tr style="vertical-align:top">
+                                    <td style="width:34%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1pt" colspan="6">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 10pt;padding-top: 1pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">ORIPLAST LIMITED</p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 4pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">
+                                            Address :-  <apex:outputText value="{!proformaInvoiceAddress}" rendered="{!NOT(ISBLANK(proformaInvoiceAddress))}"/>
+                                        </p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 4pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">State Code <span class="s3">: - CT ; </span>City <span class="s3">:- Mahasamund-493445</span></p>
+                                        <p style="padding-top: 8pt;text-indent: 0pt;text-align: left;"></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;font-weight:bold;padding-left: 1pt;text-indent: 0pt;text-align: left;">Order No :- <span class="s3"><apex:outputText value="{!IF(NOT(ISBLANK(orders.Name)), orders.Name, '')}" /></span></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 4pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Order Date :- <span class="s3"><apex:outputText value="{!IF(NOT(ISBLANK(orderDate)), orderDate, '')}" /></span></p>
+                                        
+                                    </td>
+                                    <td  style="width:66%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1px" colspan="13">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 2pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Customer Name &amp; Address:</p>
+                                        <!--<p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(NOT(ISBLANK(acc.Name)), acc.Name, '')}"/></p>
+<p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-top: 9pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingStreet)), acc.BillingStreet, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingCity)), acc.BillingCity, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingPostalCode)), acc.BillingPostalCode, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingState)), acc.BillingState, '')}"/><br/>
+<apex:outputText value="{!IF(NOT(ISBLANK(acc.BillingCountry)), acc.BillingCountry, '')}"/> -->
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(ISBLANK(acc.Name), '', acc.Name)}"/></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;padding-top: 9pt;padding-left: 1pt;text-indent: 0pt;text-align: left;"><apex:outputText value="{!IF(ISBLANK(acc.BillingStreet), '', acc.BillingStreet)}"/><br/>   
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingCity), '', acc.BillingCity)}"/><br/>
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingPostalCode), '', acc.BillingPostalCode)}"/><br/>
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingState), '', acc.BillingState)}"/><br/>
+                                            <apex:outputText value="{!IF(ISBLANK(acc.BillingCountry), '', acc.BillingCountry)}"/><br/>
+                                        </p>
+                                        <p style="text-indent: 0pt;text-align: left;"></p>
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">Customer GSTIN No:-                         <span  height="100%" style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: normal; text-decoration: none; font-size: 8pt;vertical-align: bottom;"><apex:outputText value="{!IF(NOT(ISBLANK(acc.GST_Registration_No__c)), acc.GST_Registration_No__c, '')}" /></span></p>
+                                    </td>
+                                </tr>
+                                <tr style="height:17px">
+                                    <td  style="width:19%;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1pt;border-right-color: #C2C1C1;" colspan="3">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 1pt;text-indent: 0pt;text-align: center;">OriPlast GST No.</p>
+                                    </td>
+                                    <td width="19%" style="border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1px;" colspan="3">
+                                        <p style="color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;padding-top: 1pt;padding-left: 1pt;text-indent: 0pt;text-align: left;">22AAACO3368A1Z1</p>
+                                    </td>
+                                    <td width="62%" style="border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1pt" colspan="13">
+                                        
+                                        
+                                    </td>
+                                </tr>
+                                
+                                <tr style="height:25px">
+                                    <td  style="width:1%;border-top-style:solid;border-top-width:1px;border-left-style:solid;border-left-width:1px;border-bottom-style:solid;border-bottom-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        S.No
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1px;border-bottom-style:solid;border-bottom-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Item Description
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        HSN/SAC<br/>
+                                        Code
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Unit of Measure
+                                    </td>
+                                    
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        ERP Quantity
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Unit Price
+                                    </td>
+                                    <td style="width:2%;border-top-style:solid;border-top-width:1px;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td style="width:3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        IGST
+                                    </td>
+                                    <td   style="width:3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        CGST
+                                    </td>
+                                    <td  style="width:3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        SGST
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Trade<br/>
+                                        Discount
+                                    </td>
+                                    <td style="width:2%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Cash<br/>
+                                        Discount
+                                    </td>
+                                    <td  style="width:2%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Price<br/>
+                                        After<br/>
+                                        Discount
+                                    </td>
+                                </tr>
+                                
+                                <tr style="height:18px">
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="7">
+                                        <br/>
+                                    </td>
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td  style="width=8%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td  style="width=8%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td  style="width=8%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Rate<br/>
+                                        (%)
+                                    </td>
+                                    <td style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                        Amount
+                                    </td>
+                                    <!--<td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 8pt;vertical-align: middle;text-align:center; Padding:2px">
+Rate
+</td>-->
+                                    <td  style="width=3%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                        Amount
+                                    </td>
+                                </tr>
+                                
+                                <apex:variable var="counter" value="{!0}" />
+                                <apex:repeat value="{!lineItems}" var="orderLineItem" >
+                                    <apex:outputPanel layout="none" rendered="{!counter == 0}">
+                                        <tr>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;border-left-style:solid;border-left-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!counter+1}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product_Name__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product__r.HSN_SAC_Code__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Unit_of_Measure__c}
+                                            </td>
+                                            <td  style="width=4%;border-top-style:solid;border-top-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.ERP_Quantity__c}
+                                            </td>
+                                            <td style="width=4%;border-top-style:solid;border-top-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.OriPlast_Product_Unit_Price__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.Total_Price__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0
+                                            </td>
+                                            <td  style="width=5%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0.00
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.CGST_Percentage__c}
+                                            </td>
+                                            <td  style="width=4%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.CGST__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.SGST_Percentage__c}
+                                            </td>
+                                            <td  style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.SGST__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Trade_Discount__c}
+                                            </td>
+                                            <td style="width=2%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.Trade_Discount_TD__c, 2)}
+                                            </td>
+                                            <td style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!IF(ISNULL(orderLineItem.Cash_Discount_Percentage__c), 0, orderLineItem.Cash_Discount_Percentage__c)}
+                                               
+                                            </td>
+                                            <td style="width=4%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                               {!ROUND(orderLineItem.Cash_Discount_CD__c, 2)}
+                                            </td>
+                                            <!--<td style="width=3%;border-top-style:solid;border-top-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:1px">
+
+</td>-->
+                                            <td style="width=2%;border-top-style:solid;border-top-width:1px;border-right-style:solid;border-right-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                                {!ROUND(orderLineItem.Price_After_Discount__c, 2)}
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel layout="none" rendered="{!counter != 0}">
+                                        <tr style="height:30px">
+                                            <td  style="width=2%;border-left-style:solid;border-left-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!counter+1}
+                                            </td>
+                                            <td  style="width=12%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product_Name__c}
+                                            </td>
+                                            <td style="width=6%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Ori_Plast_Product__r.HSN_SAC_Code__c}
+                                            </td>
+                                            <td style="width=6%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Unit_of_Measure__c}
+                                            </td>
+                                            <td  style="width=4%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.ERP_Quantity__c}
+                                            </td>
+                                            <td  style="width=4%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.OriPlast_Product_Unit_Price__c}
+                                            </td>
+                                            <td  style="width=7%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Total_Price__c}
+                                            </td>
+                                            <td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0
+                                            </td>
+                                            <td  style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                0.00
+                                            </td>
+                                            <td  style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.CGST_Percentage__c}
+                                            </td>
+                                            <td  style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                               {!ROUND(orderLineItem.CGST__c, 2)}
+                                            </td>
+                                            <td  style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.SGST_Percentage__c}
+                                            </td>
+                                            <td style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.SGST__c, 2)}
+                                            </td>
+                                            <td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!orderLineItem.Trade_Discount__c}
+                                            </td>
+                                            <td style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                {!ROUND(orderLineItem.Trade_Discount_TD__c, 2)}
+                                            </td>
+                                            <td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                                 {!IF(ISNULL(orderLineItem.Cash_Discount_Percentage__c), 0, orderLineItem.Cash_Discount_Percentage__c)}
+                                            </td>
+                                            <td style="width=8%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px">
+                                              {!ROUND(orderLineItem.Cash_Discount_CD__c, 2)}
+                                            </td>
+                                            <!--<td style="width=3%;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+
+</td>-->
+                                            <td  style="width=11%;border-right-style:solid;border-right-width:1px;color: black; font-family:Calibri, sans-serif; font-style: normal; text-decoration: none; font-size: 6pt;vertical-align: middle;text-align:center; Padding:1px" colspan="2">
+                                                {!ROUND(orderLineItem.Price_After_Discount__c, 2)}
+                                            </td>
+                                        </tr>
+                                    </apex:outputPanel>
+                                    <apex:variable var="counter" value="{!counter + 1}" />
+                                </apex:repeat>
+                                <tr>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;text-align:right;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px" colspan="6">
+                                        Total Line Amount :
+                                    </td>
+                                    
+                                    
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        {!ROUND(totalProductPrice, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        0.00
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                       {!ROUND(orders.Total_CGST__c, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        {!ROUND(orders.Total_SGST__c, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                      {!ROUND(orders.Total_Trade_Discount__c, 2)}
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                        <br/>
+                                    </td>
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+                                         {!ROUND(orders.Total_Cash_Discount__c, 2)}
+                                    </td>
+                                    <!--<td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px">
+<br/>
+</td>-->
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px" colspan="2">
+                                         {!ROUND(orders.Total_Price_After_Discount__c, 2)}
+                                    </td>
+                                </tr>
+                                
+                                <tr style="height:30px">
+                                    <td style="border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;padding:5px;text-align:left;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;Padding:2px" colspan="7">
+                                        {!finalOrderValueInWords}
+                                    </td>
+                                    <td style="width:61pt;border-top-style:solid;border-top-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt;color: black; font-family:Calibri, sans-serif; font-style: normal;font-weight: bold; text-decoration: none; font-size: 7pt;vertical-align: middle;text-align:center; Padding:2px" colspan="12">
+                                        Grand Total : {!ROUND(orders.Final_Order_Value__c, 2)}
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                    </tr>    
+                </table>
+            </div>
+                </apex:outputPanel>
+        </body>
+    </html>
+</apex:page>
